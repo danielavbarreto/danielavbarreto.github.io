@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EU Careers UMa</title>
+<meta name="description" content="Estágios, concursos e empregos na União Europeia, explicados para estudantes da Universidade da Madeira.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Caslon+Display&display=swap">
+<style>
+:root{
+  --bg:#ffffff; --tint:#f2f5fa; --tint2:#e8eef8; --ink:#0f1a2e; --ink2:#2b3650; --muted:#5a647b; --line:#d8deea;
+  --blue:#003399; --blue-ink:#0a3a9e; --link:#0b4ea2; --gold:#ffcc00; --on-blue:#ffffff;
+  --ok:#0b7a4b; --ok-soft:#e2f4ec; --warn:#7a5000; --warn-soft:#fff1c7; --off:#6c7489; --off-soft:#eceef3;
+  --shadow:0 1px 2px rgba(15,26,46,.06),0 8px 24px rgba(15,26,46,.06);
+  --serif:"Libre Caslon Display",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0c1322; --tint:#121b2e; --tint2:#18233a; --ink:#eef2fa; --ink2:#cfd6e6; --muted:#a3adc3; --line:#27324c;
+  --blue:#1d4fc4; --blue-ink:#9dbcff; --link:#9dbcff; --gold:#ffd23d; --on-blue:#ffffff;
+  --ok:#5fd3a0; --ok-soft:#133126; --warn:#ffd27a; --warn-soft:#3a2d0c; --off:#8c94a8; --off-soft:#1c2438;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c1322; --tint:#121b2e; --tint2:#18233a; --ink:#eef2fa; --ink2:#cfd6e6; --muted:#a3adc3; --line:#27324c;
+  --blue:#1d4fc4; --blue-ink:#9dbcff; --link:#9dbcff; --gold:#ffd23d; --on-blue:#ffffff;
+  --ok:#5fd3a0; --ok-soft:#133126; --warn:#ffd27a; --warn-soft:#3a2d0c; --off:#8c94a8; --off-soft:#1c2438;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65}
+img{max-width:100%;display:block}
+a{color:var(--link);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:700px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+.skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:#0f1a2e;padding:10px 16px;z-index:50;font-weight:700}
+.skip:focus{left:16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Barra superior */
+.topbar{background:#003399;color:#fff;font-size:13.5px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:38px}
+.topbar a{color:#fff;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.topbar a:hover{text-decoration:underline}
+.topbar span{opacity:.92;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:560px){.topbar span{display:none}.topbar .wrap{justify-content:flex-end}}
+
+/* Cabeçalho */
+.site{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);min-width:0}
+.brand .flag{width:40px;height:40px;border-radius:6px;background:#003399;display:grid;place-items:center;flex:none}
+.brand .t{line-height:1.1;min-width:0}
+.brand .t b{display:block;font-size:19px;font-weight:800;letter-spacing:-.01em;white-space:nowrap}
+.brand .t b i{font-style:normal;color:#e0b000;margin:0 3px}
+.brand .t small{display:block;font-size:12.5px;color:var(--muted);font-weight:500;margin-top:3px;white-space:nowrap}
+.nav{display:flex;gap:2px}
+.nav a{color:var(--ink2);text-decoration:none;font-weight:600;font-size:15px;padding:24px 10px 21px;border-bottom:3px solid transparent;white-space:nowrap}
+.nav a:hover,.nav a[aria-current="true"]{color:var(--blue-ink);border-bottom-color:var(--gold)}
+.menu{display:none;position:relative}
+.menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;padding:10px 14px;border:1px solid var(--line);border-radius:8px;color:var(--ink)}
+.menu summary::-webkit-details-marker{display:none}
+.menu .panel{position:absolute;right:0;top:calc(100% + 10px);background:var(--bg);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:8px;min-width:240px;display:grid}
+.menu .panel a{padding:11px 14px;border-radius:6px;text-decoration:none;color:var(--ink);font-weight:600}
+.menu .panel a:hover{background:var(--tint)}
+@media (max-width:1080px){.nav{display:none}.menu{display:block}}
+
+/* Faixa principal */
+.hero{position:relative;background:#1b2a4a url("01_portada_madeira.jpg") center 55%/cover no-repeat;min-height:clamp(340px,40vw,500px);display:flex;align-items:flex-end}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,14,34,0) 35%,rgba(6,14,34,.5) 100%)}
+.hero .wrap{position:relative;width:100%}
+.hero-card{background:var(--bg);color:var(--ink);max-width:620px;padding:32px 34px 30px;border-top:6px solid var(--gold);transform:translateY(64px);box-shadow:var(--shadow);border-radius:0 0 10px 10px}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-ink);margin:0 0 10px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5vw,60px);line-height:1.04;margin:0 0 14px;color:var(--blue-ink)}
+.hero p{margin:0 0 22px;color:var(--ink2);font-size:18px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:16px;text-decoration:none;padding:13px 20px;border-radius:8px;border:2px solid #003399;transition:background .15s,color .15s}
+.btn.primary{background:#003399;color:#fff}
+.btn.primary:hover{background:#00267a;border-color:#00267a}
+.btn.ghost{color:var(--blue-ink);background:transparent;border-color:var(--blue-ink)}
+.btn.ghost:hover{background:var(--tint)}
+.credit{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:12px;color:#fff;font-size:12px;background:rgba(6,14,34,.6);padding:3px 9px;border-radius:4px;z-index:1}
+.hero-photo{display:none}
+@media (max-width:700px){
+  .hero{min-height:0;display:block;background:none}
+  .hero::before{display:none}
+  .hero .wrap{padding:0}
+  .hero-photo{display:block;width:100%;height:240px;object-fit:cover;object-position:center 30%}
+  .hero-card{transform:none;border-radius:0;box-shadow:none;padding:26px 16px 8px;max-width:none}
+}
+
+/* Secções */
+section{scroll-margin-top:80px}
+.band{padding-block:clamp(56px,7vw,92px)}
+.band.tint{background:var(--tint)}
+.band.first{padding-top:clamp(104px,10vw,140px)}
+@media (max-width:700px){.band.first{padding-top:36px}}
+.shead{display:flex;justify-content:space-between;align-items:end;gap:16px 24px;flex-wrap:wrap;margin-bottom:34px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4vw,46px);line-height:1.1;margin:0;color:var(--blue-ink)}
+.lede{max-width:62ch;color:var(--muted);margin:10px 0 0;font-size:18px}
+h3{font-size:21px;line-height:1.3;margin:0 0 10px;font-weight:700;color:var(--ink)}
+
+/* Grelha de entradas */
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+@media (max-width:960px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+.entry{position:relative;display:grid;grid-template-columns:18px 1fr;gap:6px 14px;padding:28px 28px 30px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg);transition:background .15s}
+.entry:hover{background:var(--tint)}
+.entry svg{margin-top:7px;color:var(--link)}
+.entry a{font-size:23px;line-height:1.3;font-weight:600;text-decoration:none;color:var(--link)}
+.entry a::after{content:"";position:absolute;inset:0}
+.entry:hover a{text-decoration:underline}
+.entry p{grid-column:2;margin:0;color:var(--ink2);font-size:16px}
+
+/* Prazos */
+.deadlines{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.deadlines{grid-template-columns:1fr}}
+.deadline{background:var(--bg);border:1px solid var(--line);border-left:5px solid #003399;border-radius:10px;padding:20px 22px;display:grid;gap:6px;align-content:start;min-width:0}
+.deadline .when{font-family:var(--serif);font-size:30px;line-height:1.15;color:var(--ink)}
+.deadline .what{font-weight:700}
+.deadline .where{color:var(--muted);font-size:14.5px}
+.deadline a{font-weight:600;font-size:15px;margin-top:6px}
+.pill{justify-self:start;font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--off-soft);color:var(--off)}
+.pill.open{background:var(--ok-soft);color:var(--ok)}
+.pill.soon{background:var(--warn-soft);color:var(--warn)}
+
+/* Notícias */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+@media (max-width:960px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.cards{grid-template-columns:1fr}}
+.card{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;background:var(--bg);transition:box-shadow .2s,transform .2s;min-width:0}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.card img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.card .body{padding:22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card .tagline{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.card h3{font-size:21px;color:var(--link);margin:0;text-wrap:balance}
+.card h3 a{text-decoration:none;color:inherit}
+.card h3 a::after{content:"";position:absolute;inset:0}
+.card:hover h3 a{text-decoration:underline}
+.card p{margin:0;color:var(--ink2);font-size:16px}
+.card time{margin-top:auto;padding-top:12px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+
+/* Blocos com imagem */
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,64px);align-items:start}
+.split.rev{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.split.rev .media{order:2}
+@media (max-width:860px){.split,.split.rev{grid-template-columns:minmax(0,1fr)}.split.rev .media{order:0}}
+.media{margin:0}
+.media img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.media figcaption{font-size:12.5px;color:var(--muted);margin-top:8px}
+.prose p{margin:0 0 16px;max-width:66ch}
+.prose h2{margin-bottom:16px}
+
+/* Separadores */
+.tabs{display:flex;gap:4px;border-bottom:2px solid var(--line);margin:4px 0 24px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{appearance:none;background:none;border:0;font:inherit;font-weight:700;font-size:16px;color:var(--muted);padding:12px 16px;margin-bottom:-2px;border-bottom:3px solid transparent;cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--blue-ink);border-bottom-color:var(--gold)}
+.tab:hover{color:var(--ink)}
+.facts{list-style:none;padding:0;margin:0 0 18px;border-top:1px solid var(--line)}
+.facts li{display:grid;grid-template-columns:170px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.facts li>span:first-child{color:var(--muted);font-weight:600;font-size:15px}
+.facts li>span:last-child{min-width:0}
+@media (max-width:520px){.facts li{grid-template-columns:1fr;gap:2px}}
+.links{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:6px}
+.chev{display:inline-flex;align-items:center;gap:9px;font-weight:700;text-decoration:none}
+.chev:hover{text-decoration:underline}
+.note{color:var(--muted);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 20px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:15px;background:var(--bg)}
+.callout{background:var(--tint2);border-radius:10px;padding:18px 20px;margin:18px 0;max-width:66ch}
+.band.tint .callout{background:var(--bg);border:1px solid var(--line)}
+.callout strong{color:var(--blue-ink)}
+
+/* Preparação */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:760px){.duo{grid-template-columns:1fr}}
+.tile{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:28px 28px 26px}
+.tile .ico{width:48px;height:48px;border-radius:10px;background:var(--tint2);color:var(--blue-ink);display:grid;place-items:center;margin-bottom:16px}
+.tile p{margin:0;color:var(--ink2)}
+.tile.go{display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s}
+.tile.go:hover{border-color:var(--link);box-shadow:var(--shadow)}
+.tile.go h3{color:var(--link)}
+.tile .more{margin-top:auto;padding-top:18px;display:inline-flex;align-items:center;gap:9px;font-weight:700;color:var(--link)}
+.tile.go:hover .more{text-decoration:underline}
+
+/* Mitos */
+.faq{border-top:1px solid var(--line);max-width:880px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:22px 4px;font-weight:700;font-size:19px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{width:34px;height:34px;border-radius:50%;border:2px solid var(--link);color:var(--link);display:grid;place-items:center;transition:transform .2s}
+.faq details[open] summary .pm{transform:rotate(45deg)}
+.faq .a{padding:0 4px 24px;max-width:70ch}
+.verdict{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:var(--warn-soft);color:var(--warn);padding:3px 10px;border-radius:999px;margin-bottom:8px}
+
+/* Embaixadora */
+.amb{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:clamp(36px,6vw,80px);align-items:center}
+@media (max-width:800px){.amb{grid-template-columns:minmax(0,1fr)}}
+.amb .photo{position:relative;max-width:340px;z-index:0;margin-right:14px}
+.amb .photo img{border-radius:10px;aspect-ratio:438/560;object-fit:cover;object-position:top;width:100%}
+.amb .photo::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:3px solid #003399;border-radius:10px;z-index:-1}
+.amb .role{font-size:13.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-ink);margin:0 0 8px}
+.amb ul{list-style:none;padding:0;margin:18px 0 26px;display:grid;gap:10px}
+.amb li{display:grid;grid-template-columns:20px 1fr;gap:10px}
+.amb li svg{margin-top:5px;color:var(--blue-ink)}
+.become{margin-top:clamp(56px,7vw,88px);padding-top:clamp(48px,6vw,72px);border-top:1px solid var(--line)}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media (max-width:960px){.three{grid-template-columns:minmax(0,1fr)}}
+.ticks{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:12px}
+.ticks li{display:grid;grid-template-columns:18px 1fr;gap:10px;color:var(--ink2);font-size:16px}
+.ticks li svg{margin-top:5px;color:var(--blue-ink)}
+.links a.chev{overflow-wrap:anywhere}
+
+/* Ligações oficiais */
+.official{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px;border-top:1px solid var(--line)}
+@media (max-width:860px){.official{grid-template-columns:1fr}}
+.official a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-weight:700}
+.official a small{display:block;color:var(--muted);font-weight:400;font-size:14px}
+.official a:hover{color:var(--link)}
+.official a svg{flex:none;color:var(--link)}
+
+
+/* Por onde começar */
+.paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:960px){.paths{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.paths{grid-template-columns:minmax(0,1fr)}}
+.path{background:var(--bg);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:10px;padding:22px 24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.path .who{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.path h3{margin:0;font-size:20px}
+.path p{margin:0;color:var(--ink2);font-size:16px}
+.path .go{margin-top:auto;padding-top:6px;display:flex;flex-wrap:wrap;gap:6px 18px}
+/* Calendário */
+.cal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media (max-width:1000px){.cal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cal{grid-template-columns:minmax(0,1fr)}}
+.month{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:var(--bg);min-width:0}
+.month h3{font-family:var(--serif);font-weight:400;font-size:24px;color:var(--blue-ink);margin:0 0 8px}
+.month ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.month li{font-size:15px;line-height:1.45;color:var(--ink2);padding-left:14px;position:relative}
+.month li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.month li b{color:var(--ink)}
+.always{margin-top:20px;display:flex;gap:14px;align-items:flex-start;background:var(--tint2);border-radius:10px;padding:16px 20px}
+.band.tint .always{background:var(--bg);border:1px solid var(--line)}
+
+/* Rodapé */
+footer{background:var(--tint);color:var(--ink2);font-size:15px;border-top:4px solid var(--gold)}
+footer a{color:var(--link)}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-block:56px 36px}
+@media (max-width:800px){footer .cols{grid-template-columns:1fr;gap:28px}}
+footer h4{color:var(--ink);font-size:13.5px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 14px}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+footer ul a{text-decoration:none}
+footer ul a:hover{text-decoration:underline}
+footer .fbrand b{font-size:22px;color:var(--ink);font-weight:800}
+footer .fbrand b i{font-style:normal;color:#e0b000;margin:0 3px}
+footer .fbrand p{margin:12px 0 0;max-width:42ch;color:var(--muted)}
+footer .legal{border-top:1px solid var(--line);padding-block:22px 36px;color:var(--muted);font-size:13.5px;display:grid;gap:6px}
+footer .legal p{margin:0;max-width:110ch}
+.totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;background:#003399;color:#fff;display:grid;place-items:center;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .2s;z-index:30}
+.totop.show{opacity:1;pointer-events:auto}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="c" viewBox="0 0 16 24"><path d="M4 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></symbol>
+  <symbol id="test" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 9l1.5 1.5 3-3M8.5 15l1.5 1.5 3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="check" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="plus" viewBox="0 0 20 20"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.5l2.7 6.1 6.6.6-5 4.4 1.5 6.5L12 16.7 6.2 20.1l1.5-6.5-5-4.4 6.6-.6z" fill="currentColor"/></symbol>
+</svg>
+<a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Página informativa da Embaixadora EU Careers na Universidade da Madeira</span>
+    <a href="https://www.instagram.com/umaepso/"><svg width="16" height="16"><use href="#ig"/></svg>@umaepso</a>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="EU Careers UMa, início">
+      <span class="flag" aria-hidden="true"><svg width="24" height="24" style="color:#ffcc00"><use href="#star"/></svg></span>
+      <span class="t"><b>EU Careers<i>›</i>UMa</b><small>Embaixadora EU Careers 2026/27</small></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#comecar">Começar</a>
+      <a href="#calendario">Calendário</a>
+      <a href="#estagios">Estágios</a>
+      <a href="#concursos">Concursos</a>
+      <a href="#temporarios">Empregos temporários</a>
+      <a href="#novidades">Novidades</a>
+      <a href="#embaixadora">Embaixadora</a>
+    </nav>
+    <details class="menu">
+      <summary aria-label="Abrir menu"><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Menu</summary>
+      <div class="panel">
+        <a href="#comecar">Por onde começar</a><a href="#calendario">Calendário</a><a href="#estagios">Estágios</a><a href="#concursos">Concursos</a><a href="#temporarios">Empregos temporários</a><a href="#epso">O que é a EPSO</a><a href="#preparacao">Preparação</a><a href="#mitos">Mitos e realidade</a><a href="#novidades">Novidades</a><a href="#embaixadora">Embaixadora</a>
+      </div>
+    </details>
+  </div>
+</header>
+
+<main id="conteudo">
+<section class="hero" id="inicio" aria-labelledby="h-hero">
+  <img class="hero-photo" src="01_portada_madeira.jpg" alt="">
+  <span class="credit">Madeira · Foto: Francois Saint Leger / Unsplash</span>
+  <div class="wrap">
+    <div class="hero-card">
+      <p class="eyebrow">Carreiras na União Europeia</p>
+      <h1 id="h-hero">Queres trabalhar na UE?</h1>
+      <p>Estágios, concursos e empregos nas instituições europeias, explicados de forma simples para estudantes e recém-licenciados da Universidade da Madeira.</p>
+      <div class="btns">
+        <a class="btn primary" href="#comecar">Por onde começar<svg width="12" height="18"><use href="#c"/></svg></a>
+        <a class="btn ghost" href="#calendario">Ver calendário</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band first" aria-labelledby="h-temas">
+  <div class="wrap">
+    <h2 id="h-temas" class="sr">Temas</h2>
+    <div class="grid">
+      <div class="entry"><svg width="16" height="24"><use href="#c"/></svg><a href="#estagios">Estágios</a><p>Estágios remunerados na Comissão Europeia, no Tribunal de Contas Europeu e em agências da UE, como a EUAA.</p></div>
+      <div class="entry"><svg width="16" height="24"><use href="#c"/></svg><a href="#concursos">Concursos</a><p>Os processos de seleção da EPSO para uma carreira permanente nas instituições europeias.</p></div>
+      <div class="entry"><svg width="16" height="24"><use href="#c"/></svg><a href="#temporarios">Empregos temporários</a><p>Contratos de alguns meses a alguns anos, sem esperar pelos longos ciclos dos concursos.</p></div>
+      <div class="entry"><svg width="16" height="24"><use href="#c"/></svg><a href="#epso">O que é a EPSO</a><p>Quem organiza a seleção para trabalhar nas instituições da UE e a quem se destina.</p></div>
+      <div class="entry"><svg width="16" height="24"><use href="#c"/></svg><a href="#preparacao">Como te preparar</a><p>Vídeos tutoriais e testes de exemplo da EPSO.</p></div>
+      <div class="entry"><svg width="16" height="24"><use href="#c"/></svg><a href="#mitos">Mitos e realidade</a><p>As dúvidas mais comuns sobre trabalhar na UE, respondidas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band tint" id="comecar" aria-labelledby="h-comecar">
+  <div class="wrap">
+    <div class="shead"><div><h2 id="h-comecar">Por onde começar</h2><p class="lede">Escolhe o perfil que mais se parece contigo e descobre a opção que melhor se adapta.</p></div></div>
+    <div class="paths">
+      <article class="path"><span class="who">Ainda estou a estudar</span><h3>Estágio na EUAA ou programa de embaixadores</h3><p>A EUAA aceita estudantes do ensino superior com pelo menos três anos de estudos. O programa de embaixadores EU Careers também é para estudantes de universidades participantes.</p><div class="go"><a class="chev" href="#estagios" data-tab="t-euaa"><svg width="12" height="18"><use href="#c"/></svg>Estágios na EUAA</a><a class="chev" href="#embaixadora"><svg width="12" height="18"><use href="#c"/></svg>Ser embaixador</a></div></article>
+      <article class="path"><span class="who">Acabei a licenciatura</span><h3>Estágio Blue Book ou no Tribunal de Contas</h3><p>O Blue Book exige uma licenciatura completa (mínimo de 3 anos) concluída antes do fim do prazo. O Tribunal de Contas Europeu tem duas sessões de estágio por ano.</p><div class="go"><a class="chev" href="#estagios" data-tab="t-bb"><svg width="12" height="18"><use href="#c"/></svg>Blue Book</a><a class="chev" href="#estagios" data-tab="t-tce"><svg width="12" height="18"><use href="#c"/></svg>Tribunal de Contas</a></div></article>
+      <article class="path"><span class="who">Quero começar a trabalhar já</span><h3>Agente contratual</h3><p>A inscrição na seleção de agentes contratuais está sempre aberta, sem prazo. Há perfis em áreas como administração, comunicação, finanças, direito ou informática.</p><div class="go"><a class="chev" href="https://selection.eu-careers.europa.eu/en/contract-staff-selection-procedures-always-open-registration"><svg width="12" height="18"><use href="#c"/></svg>Inscrição de agentes contratuais</a></div></article>
+      <article class="path"><span class="who">Falo bem várias línguas</span><h3>Juristas-linguistas e tradutores</h3><p>A EPSO prevê concursos de juristas-linguistas e de tradutores que incluem o português. Vê as datas no calendário.</p><div class="go"><a class="chev" href="#calendario"><svg width="12" height="18"><use href="#c"/></svg>Ver calendário</a></div></article>
+      <article class="path"><span class="who">Quero uma carreira permanente</span><h3>Concursos da EPSO</h3><p>Os concursos dão acesso a lugares permanentes nas instituições da UE. A EPSO publica com antecedência os concursos que está a preparar.</p><div class="go"><a class="chev" href="https://selection.eu-careers.europa.eu/en/upcoming-selection-procedures"><svg width="12" height="18"><use href="#c"/></svg>Próximos concursos</a></div></article>
+      <article class="path"><span class="who">Ainda não sei</span><h3>Começa por te preparar</h3><p>Vê os vídeos tutoriais e os testes de exemplo da EPSO para conheceres o formato das provas.</p><div class="go"><a class="chev" href="#preparacao"><svg width="12" height="18"><use href="#c"/></svg>Como te preparar</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="prazos" aria-labelledby="h-prazos">
+  <div class="wrap">
+    <div class="shead"><div><h2 id="h-prazos">Prazos a não perder</h2><p class="lede">O estado de cada prazo atualiza-se automaticamente. Confirma sempre a data no site oficial.</p></div></div>
+    <div class="deadlines">
+      <article class="deadline" data-close="2026-11-25T11:00:00Z"><span class="pill">Aberto</span><span class="when">25 nov 2026</span><span class="what">Juristas-linguistas (AD7)</span><span class="where">Até às 12:00, hora do Luxemburgo</span><a href="#concursos">Ver detalhes</a></article>
+      <article class="deadline" data-close="2026-11-30T23:59:00Z"><span class="pill">Aberto</span><span class="when">30 nov 2026</span><span class="what">Estágios no Tribunal de Contas Europeu</span><span class="where">Início a partir de abril de 2027</span><a href="#estagios" data-tab="t-tce">Ver detalhes</a></article>
+      <article class="deadline" data-close="2026-12-01T11:00:00Z"><span class="pill">Aberto</span><span class="when">1 dez 2026</span><span class="what">Estágios na EUAA, em Malta</span><span class="where">Até às 12:00, hora de Malta</span><a href="#estagios" data-tab="t-euaa">Ver detalhes</a></article>
+      <article class="deadline" data-open="2026-12-09T00:00:00Z" data-close="2027-01-20T23:59:00Z"><span class="pill soon">Em breve</span><span class="when">9 dez 2026 a 20 jan 2027</span><span class="what">Juristas-linguistas com português (EPSO/AD/432/26)</span><span class="where">Datas previstas pela EPSO</span><a href="https://selection.eu-careers.europa.eu/en/upcoming-selection-procedures">Ver na EPSO</a></article>
+      <article class="deadline" data-open="2027-02-15T09:00:00Z" data-close="2027-03-12T09:00:00Z"><span class="pill soon">Em breve</span><span class="when">15 fev a 12 mar 2027</span><span class="what">Estágio Blue Book, sessão de outubro de 2027</span><span class="where">Até às 10:00, hora de Bruxelas</span><a href="#estagios" data-tab="t-bb">Ver detalhes</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="band tint" id="calendario" aria-labelledby="h-cal">
+  <div class="wrap">
+    <div class="shead"><div><h2 id="h-cal">Calendário</h2><p class="lede">O que abre ao longo do ano, segundo a informação publicada pela EPSO, pela Comissão Europeia e pelo Tribunal de Contas Europeu. Algumas datas da EPSO para 2027 ainda são indicativas e podem mudar.</p></div></div>
+    <div class="cal">
+      <div class="month"><h3>Dezembro 2026</h3><ul><li><b>1 dez:</b> fim do prazo dos estágios na EUAA</li><li><b>9 dez:</b> publicação prevista do concurso de juristas-linguistas com português (EPSO/AD/432/26)</li></ul></div>
+      <div class="month"><h3>Janeiro 2027</h3><ul><li><b>20 jan:</b> fim do prazo previsto do concurso de juristas-linguistas com português</li><li>Concurso previsto: juristas (AD 7)</li></ul></div>
+      <div class="month"><h3>Fevereiro 2027</h3><ul><li><b>15 fev a 12 mar:</b> candidaturas ao Blue Book, sessão de outubro de 2027</li><li>Início da seleção de embaixadores EU Careers 2027/2028 (fevereiro/março)</li><li>Concurso previsto: juristas (AD)</li></ul></div>
+      <div class="month"><h3>Março 2027</h3><ul><li><b>1 mar:</b> início da sessão de março do Blue Book</li><li>Concurso previsto: assistentes em trabalho parlamentar (AST)</li></ul></div>
+      <div class="month"><h3>Abril 2027</h3><ul><li><b>1 abr:</b> início da primeira sessão de estágios no Tribunal de Contas Europeu</li><li>Concurso previsto: segurança, defesa e assuntos internacionais (AD)</li></ul></div>
+      <div class="month"><h3>Maio 2027</h3><ul><li>Concurso previsto: revisores e editores no Luxemburgo (AST)</li></ul></div>
+      <div class="month"><h3>Junho 2027</h3><ul><li>Concurso previsto: tradutores, incluindo português (AD)</li></ul></div>
+      <div class="month"><h3>Julho 2027</h3><ul><li>Concurso previsto: juristas-linguistas (AD)</li><li>Blue Book: em 2026, as candidaturas para a sessão de março decorreram de 22 de julho a 4 de setembro</li></ul></div>
+      <div class="month"><h3>Setembro 2027</h3><ul><li>Concurso previsto: gestão financeira (AD)</li></ul></div>
+      <div class="month"><h3>Outubro 2027</h3><ul><li><b>1 out:</b> início da sessão de outubro do Blue Book</li><li><b>1 out:</b> início da segunda sessão de estágios no Tribunal de Contas Europeu</li><li>Formação obrigatória dos novos embaixadores EU Careers</li></ul></div>
+      <div class="month"><h3>Novembro 2027</h3><ul><li>Concurso previsto: TIC (AST)</li></ul></div>
+    </div>
+    <div class="always"><strong style="color:var(--blue-ink);white-space:nowrap">Todo o ano</strong><span>A inscrição na seleção de agentes contratuais está sempre aberta, sem prazo. <a href="https://selection.eu-careers.europa.eu/en/contract-staff-selection-procedures-always-open-registration">Saber mais</a> · <a href="https://selection.eu-careers.europa.eu/en/upcoming-selection-procedures">Próximos concursos da EPSO</a> · <a href="https://traineeships.ec.europa.eu/calendar-sessions_en">Calendário do Blue Book</a></span></div>
+  </div>
+</section>
+
+<section class="band" id="estagios" aria-labelledby="h-est">
+  <div class="wrap split">
+    <figure class="media"><img style="object-position:center 15%" src="02_estagios.jpg" alt="Jovem sorridente com uma bandeira da União Europeia"><figcaption>Imagem: © EPSO</figcaption></figure>
+    <div class="prose">
+      <h2 id="h-est">Estágios</h2>
+      <div class="tabs" role="tablist" aria-label="Tipos de estágio">
+        <button class="tab" role="tab" id="t-bb" aria-controls="p-bb" aria-selected="true">Blue Book</button>
+        <button class="tab" role="tab" id="t-tce" aria-controls="p-tce" aria-selected="false" tabindex="-1">Tribunal de Contas</button>
+        <button class="tab" role="tab" id="t-euaa" aria-controls="p-euaa" aria-selected="false" tabindex="-1">EUAA (Malta)</button>
+        <button class="tab" role="tab" id="t-ag" aria-controls="p-ag" aria-selected="false" tabindex="-1">Agências da UE</button>
+      </div>
+      <div role="tabpanel" id="p-bb" aria-labelledby="t-bb">
+        <h3>Estágio Blue Book · Comissão Europeia</h3>
+        <ul class="facts">
+          <li><span>Bolsa</span><span>1 538 € por mês (valor de referência de 2026)</span></li>
+          <li><span>Duração</span><span>5 meses</span></li>
+          <li><span>Sessões</span><span>Duas por ano, com início em março ou em outubro</span></li>
+          <li><span>Próximas candidaturas</span><span>15 de fevereiro a 12 de março de 2027, até às 10:00 (hora de Bruxelas), para a sessão de outubro de 2027</span></li>
+          <li><span>Formação</span><span>Licenciatura completa (mínimo de 3 anos), concluída antes do fim do prazo de candidatura</span></li>
+          <li><span>Línguas</span><span>Inglês, francês ou alemão em nível C1 e outra língua oficial da UE em nível B2</span></li>
+          <li><span>Experiência</span><span>No máximo 6 semanas em instituições da UE</span></li>
+        </ul>
+        <p class="note">Todos os documentos são enviados num único PDF com índice, e a candidatura não pode ser corrigida depois de submetida.</p>
+        <div class="links"><a class="chev" href="https://traineeships.ec.europa.eu/"><svg width="12" height="18"><use href="#c"/></svg>Site oficial do Blue Book</a></div>
+      </div>
+      <div role="tabpanel" id="p-tce" aria-labelledby="t-tce" hidden>
+        <h3>Estágios no Tribunal de Contas Europeu (TCE)</h3>
+        <ul class="facts">
+          <li><span>Prazo</span><span>Até 30 de novembro de 2026</span></li>
+          <li><span>Período</span><span>A partir de abril de 2027, durante 6 meses</span></li>
+          <li><span>Subsídio</span><span>Estágio padrão: 2000 € por mês · Estágio em IA: 2500 € por mês</span></li>
+          <li><span>Sessões</span><span>Duas por ano: de 1 de abril a 30 de setembro e de 1 de outubro a 31 de março</span></li>
+        </ul>
+        <div class="links"><a class="chev" href="https://www.eca.europa.eu/en/traineeships"><svg width="12" height="18"><use href="#c"/></svg>Candidatura no site do TCE</a></div>
+      </div>
+      <div role="tabpanel" id="p-euaa" aria-labelledby="t-euaa" hidden>
+        <h3>Estágios na Agência da União Europeia para o Asilo (EUAA)</h3>
+        <p>Programa de estágios para recém-licenciados e estudantes do ensino superior, com entrada em 2027. A sede da EUAA fica em Valeta, Malta, e a agência tem também escritórios em Itália, Grécia, Chipre, Bélgica e Espanha.</p>
+        <ul class="facts">
+          <li><span>Prazo</span><span>1 de dezembro de 2026, até às 12:00 (hora de Malta)</span></li>
+          <li><span>Início</span><span>1 de março, 16 de março ou 1 de abril de 2027</span></li>
+          <li><span>Duração</span><span>Até 6 meses, renovável uma vez por mais 6 meses (máximo de 12 meses)</span></li>
+          <li><span>Bolsa</span><span>1500 € por mês, mais um subsídio de viagem no início e no fim do estágio se tiveres de te deslocar mais de 100 km</span></li>
+          <li><span>Nacionalidade</span><span>Cidadão de um Estado-Membro da UE ou de um país associado a Schengen (Islândia, Listenstaine, Noruega ou Suíça)</span></li>
+          <li><span>Formação</span><span>Pelo menos o primeiro ciclo do ensino superior concluído, ou pelo menos três anos de estudos</span></li>
+          <li><span>Línguas</span><span>Inglês, no mínimo de nível B2</span></li>
+          <li><span>Seleção</span><span>Entrevista remota em inglês, prevista entre meados de dezembro de 2026 e fevereiro de 2027</span></li>
+        </ul>
+        <div class="callout"><strong>Como te candidatar:</strong> apenas através da ferramenta de candidatura online da EUAA, preenchendo todas as secções do formulário. Podes candidatar-te a um máximo de três estágios. Não deixes para o último momento, porque o sistema pode ficar sobrecarregado perto do prazo.</div>
+        <p>Durante o estágio, tens um mentor que te ajuda a desenvolver as tuas competências, num ambiente multicultural.</p>
+        <p class="note">Dúvidas: traineeship@euaa.europa.eu</p>
+        <div class="links"><a class="chev" href="https://www.euaa.europa.eu/careers/traineeship"><svg width="12" height="18"><use href="#c"/></svg>Página oficial dos estágios da EUAA</a></div>
+      </div>
+      <div role="tabpanel" id="p-ag" aria-labelledby="t-ag" hidden>
+        <h3>Agências da UE</h3>
+        <p>Para além de Bruxelas e do Luxemburgo, dezenas de agências especializadas da UE, espalhadas pela Europa, publicam ofertas de estágio ao longo do ano.</p>
+        <div class="callout"><strong>Em Portugal:</strong> duas destas agências estão em Lisboa, a EUDA (Agência da União Europeia sobre Drogas) e a EMSA (Agência Europeia da Segurança Marítima).</div>
+        <p class="note">Fonte: mapa de Jonathan Grobe e Alina Tereszkiewicz, partilhado pela EPSO.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band tint" id="concursos" aria-labelledby="h-conc">
+  <div class="wrap split rev">
+    <figure class="media"><img src="03_concursos.jpg" alt="Figuras de madeira coloridas em fila"><figcaption>Imagem: © EPSO</figcaption></figure>
+    <div class="prose">
+      <h2 id="h-conc">Concursos</h2>
+      <h3>Juristas-linguistas · Tribunal de Justiça da UE, Luxemburgo (AD7)</h3>
+      <p>Função principal: traduzir textos jurídicos complexos para a tua língua principal, a partir de pelo menos duas outras línguas oficiais da UE (incluindo o francês).</p>
+      <p style="margin-bottom:6px"><strong>Línguas de destino</strong></p>
+      <div class="chips"><span class="chip">Búlgaro</span><span class="chip">Alemão</span><span class="chip">Grego</span><span class="chip">Espanhol</span><span class="chip">Irlandês</span><span class="chip">Maltês</span><span class="chip">Neerlandês</span><span class="chip">Romeno</span></div>
+      <ul class="facts"><li><span>Prazo</span><span>25 de novembro de 2026, até às 12:00 (hora do Luxemburgo)</span></li></ul>
+      <div class="links">
+        <a class="chev" href="https://selection.eu-careers.europa.eu/en/apply-lawyer-linguists-competition-ad7"><svg width="12" height="18"><use href="#c"/></svg>Candidatura</a>
+        <a class="chev" href="https://youtu.be/HoZFQdm6bPo"><svg width="12" height="18"><use href="#c"/></svg>Vídeo tutorial da EPSO (em inglês)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="temporarios" aria-labelledby="h-temp">
+  <div class="wrap split">
+    <figure class="media"><img src="04_empregos_temporarios.jpg" alt="Mão a escrever Job Vacancy num quadro"><figcaption>Imagem: © EPSO</figcaption></figure>
+    <div class="prose">
+      <h2 id="h-temp">Empregos temporários</h2>
+      <p>Os lugares de <strong>agentes contratuais</strong> e <strong>agentes temporários</strong> são uma forma flexível para licenciados e profissionais ganharem experiência internacional em instituições, órgãos e agências da UE.</p>
+      <p>Os contratos vão de alguns meses a alguns anos, por isso podes trabalhar sem esperar pelos longos ciclos dos concursos.</p>
+      <div class="links"><a class="chev" href="https://eu-careers.europa.eu/jobs_en"><svg width="12" height="18"><use href="#c"/></svg>Ver vagas temporárias</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="band tint" id="epso" aria-labelledby="h-epso">
+  <div class="wrap split rev">
+    <figure class="media"><img src="05_epso.jpg" alt="Mãos a segurar um globo iluminado ao pôr do sol"><figcaption>Imagem: © EPSO</figcaption></figure>
+    <div class="prose">
+      <h2 id="h-epso">O que é a EPSO</h2>
+      <p>A EPSO é o Serviço Europeu de Seleção do Pessoal, que organiza os processos de seleção para trabalhar nas instituições da União Europeia.</p>
+      <p>Através da EPSO podes aceder a lugares em instituições como a Comissão Europeia, o Parlamento Europeu ou o Conselho da UE, em áreas como Administração, Tradução e Interpretação ou Economia e Finanças.</p>
+      <div class="callout">Destina-se a pessoas de diferentes áreas de formação, com interesse numa carreira internacional e vocação de serviço público europeu. <strong>Não existe um perfil "perfeito".</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="preparacao" aria-labelledby="h-prep">
+  <div class="wrap">
+    <div class="shead"><div><h2 id="h-prep">Como te preparar</h2></div></div>
+    <div class="duo">
+      <a class="tile go" href="https://selection.eu-careers.europa.eu/en/what-know-about-testing"><span class="ico"><svg width="26" height="26"><use href="#play"/></svg></span><h3>Vídeos tutoriais</h3><p>A EPSO publica vídeos que explicam como te preparar antes do dia do teste, como iniciar o teste no próprio dia e como fazer o teste na plataforma TestWe.</p><span class="more">Ver vídeos tutoriais (em inglês)<svg width="12" height="18"><use href="#c"/></svg></span></a>
+      <a class="tile go" href="https://selection.eu-careers.europa.eu/en/selection-procedure/epso-tests"><span class="ico"><svg width="26" height="26"><use href="#test"/></svg></span><h3>Testes de exemplo</h3><p>A EPSO disponibiliza testes de exemplo para te familiarizares com o formato das provas de escolha múltipla.</p><span class="more">Ver testes de exemplo (em inglês)<svg width="12" height="18"><use href="#c"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band tint" id="mitos" aria-labelledby="h-mitos">
+  <div class="wrap">
+    <div class="shead"><div><h2 id="h-mitos">Mitos e realidade</h2><p class="lede">Carrega numa afirmação para veres a resposta.</p></div></div>
+    <div class="faq">
+      <details><summary>"Para trabalhar na UE, precisas de falar 5 línguas e ter 3 doutoramentos."<span class="pm"><svg width="16" height="16"><use href="#plus"/></svg></span></summary><div class="a"><span class="verdict">Mito</span><p style="margin:0">A maioria dos lugares de entrada e dos estágios só exige 2 línguas oficiais da UE e uma licenciatura.</p></div></details>
+      <details><summary>"Os testes de seleção da UE são um pesadelo."<span class="pm"><svg width="16" height="16"><use href="#plus"/></svg></span></summary><div class="a"><span class="verdict">Mito</span><p style="margin:0">Podes preparar-te com testes de prática gratuitos online e com os vídeos tutoriais da EPSO.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="novidades" aria-labelledby="h-nov">
+  <div class="wrap">
+    <div class="shead"><div><h2 id="h-nov">Novidades</h2><p class="lede">As publicações mais recentes da Embaixadora EU Careers na UMa.</p></div><a class="chev" href="https://www.instagram.com/umaepso/"><svg width="12" height="18"><use href="#c"/></svg>Todas as publicações no Instagram</a></div>
+    <div class="cards">
+      <article class="card">
+        <img alt="Ilustração de um calendário com um sino" src="05_epso.jpg">
+        <div class="body"><span class="tagline">Estágios</span><h3><a href="#estagios" data-tab="t-euaa">Estágio de última hora na EUAA, em Malta</a></h3><p>Estágios de até 6 meses, com início em março ou abril de 2027 e bolsa de 1500 € por mês. Candidaturas até 1 de dezembro de 2026.</p><time datetime="2026-11-21">21 de novembro de 2026</time></div>
+      </article>
+      <article class="card">
+        <img alt="Pessoa a trabalhar num portátil com formulários digitais" src="06_novidade_juristas.jpg">
+        <div class="body"><span class="tagline">Concursos</span><h3><a href="#concursos">Novo concurso da EPSO: juristas-linguistas no Tribunal de Justiça da UE</a></h3><p>Para traduzir textos jurídicos complexos a partir de pelo menos duas outras línguas oficiais da UE, incluindo o francês.</p><time datetime="2026-10-29">29 de outubro de 2026</time></div>
+      </article>
+      <article class="card">
+        <img alt="Mãos de várias pessoas juntas ao centro" src="07_novidade_tce.jpg">
+        <div class="body"><span class="tagline">Estágios</span><h3><a href="#estagios" data-tab="t-tce">O Tribunal de Contas Europeu também oferece estágios remunerados</a></h3><p>Candidaturas até 30 de novembro de 2026, para estágios de 6 meses a partir de abril de 2027.</p><time datetime="2026-10-31">31 de outubro de 2026</time></div>
+      </article>
+      <article class="card">
+        <img alt="Passaportes sobre a bandeira da União Europeia" src="08_novidade_temporarios.jpg">
+        <div class="body"><span class="tagline">Empregos temporários</span><h3><a href="#temporarios">Empregos temporários e estágios em agências, incluindo em Lisboa</a></h3><p>Os concursos não são a única porta de entrada nas instituições europeias.</p><time datetime="2026-11-19">19 de novembro de 2026</time></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band tint" id="embaixadora" aria-labelledby="h-amb">
+  <div class="wrap amb">
+    <div class="photo"><img src="09_embaixadora_daniela.jpg" alt="Daniela Barreto, sorridente, sentada a uma mesa"></div>
+    <div class="prose">
+      <p class="role">Embaixadora EU Careers 2026/27</p>
+      <h2 id="h-amb">Daniela Barreto</h2>
+      <p style="margin-top:14px">Estudante de Línguas e Relações Empresariais na Universidade da Madeira e Embaixadora EU Careers no ano letivo 2026/27.</p>
+      <ul>
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Estágios em instituições europeias</span></li>
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Oportunidades em Bruxelas e no Luxemburgo</span></li>
+      </ul>
+      <div class="btns"><a class="btn primary" href="https://www.instagram.com/umaepso/"><svg width="18" height="18"><use href="#ig"/></svg>Seguir @umaepso</a></div>
+    </div>
+  </div>
+  <div class="wrap become">
+    <div class="shead"><div><h2 id="h-next">Queres ser o próximo embaixador?</h2><p class="lede">O processo de seleção para o ano letivo 2027/2028 começa em <strong>fevereiro/março de 2027</strong>.</p></div></div>
+    <div class="three">
+      <div class="tile"><h3>Requisitos</h3><ul class="ticks">
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Ser cidadão da UE</span></li>
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Ser fluente em inglês e na língua do país onde estudas</span></li>
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Estudar numa das universidades participantes no programa</span></li>
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Participar numa formação obrigatória de um dia em outubro de 2027</span></li>
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Estar inscrito e presente na universidade durante todo o mandato, de outubro de 2027 a setembro de 2028</span></li>
+      </ul></div>
+      <div class="tile"><h3>O que faz um embaixador</h3><ul class="ticks">
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>É o ponto de contacto para os estudantes interessados numa carreira na UE</span></li>
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Organiza ou participa em pelo menos um evento ou apresentação EU Careers</span></li>
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Dedica pelo menos duas horas por semana ao programa</span></li>
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Regista as atividades e reporta-as regularmente</span></li>
+      </ul></div>
+      <div class="tile"><h3>O que ganhas</h3><ul class="ticks">
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Formação inicial completa e acompanhamento durante todo o mandato</span></li>
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Uma carta de referência baseada no teu desempenho</span></li>
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>Experiência profissional e competências em falar em público, marketing e recursos humanos</span></li>
+        <li><svg width="16" height="16"><use href="#check"/></svg><span>A oportunidade de conhecer altos funcionários da UE</span></li>
+      </ul></div>
+    </div>
+    <h3 style="margin-top:40px">Dúvidas frequentes</h3>
+    <div class="faq" style="margin-bottom:24px">
+      <details><summary>A minha universidade participa no programa?<span class="pm"><svg width="16" height="16"><use href="#plus"/></svg></span></summary><div class="a"><p style="margin:0">Só podem ser embaixadores os estudantes das universidades que constam da lista oficial da EPSO, definida em conjunto com os governos nacionais. Se a tua universidade não estiver na lista, a EPSO recomenda que voltes a consultar no início do ano seguinte. <a href="https://selection.eu-careers.europa.eu/job-opportunities/eu-careers-student-ambassadors/participating-unversities">Ver a lista de universidades participantes</a>.</p></div></details>
+      <details><summary>Quando posso candidatar-me?<span class="pm"><svg width="16" height="16"><use href="#plus"/></svg></span></summary><div class="a"><p style="margin:0">O processo de seleção para o ano letivo 2027/2028 começa em fevereiro/março de 2027. Ainda não há candidaturas abertas.</p></div></details>
+      <details><summary>Quanto tempo dura o mandato?<span class="pm"><svg width="16" height="16"><use href="#plus"/></svg></span></summary><div class="a"><p style="margin:0">Um ano letivo: de outubro de 2027 a setembro de 2028. Durante todo esse período tens de estar inscrito e presente na tua universidade.</p></div></details>
+      <details><summary>Quanto tempo exige por semana?<span class="pm"><svg width="16" height="16"><use href="#plus"/></svg></span></summary><div class="a"><p style="margin:0">Pelo menos duas horas por semana, e tens de organizar ou participar em pelo menos um evento ou apresentação EU Careers.</p></div></details>
+      <details><summary>Há formação?<span class="pm"><svg width="16" height="16"><use href="#plus"/></svg></span></summary><div class="a"><p style="margin:0">Sim. Há uma formação obrigatória de um dia em outubro de 2027, e recebes acompanhamento durante todo o mandato.</p></div></details>
+      <details><summary>Que línguas tenho de falar?<span class="pm"><svg width="16" height="16"><use href="#plus"/></svg></span></summary><div class="a"><p style="margin:0">Tens de ser fluente em inglês e na língua do país onde estudas.</p></div></details>
+    </div>
+    <div class="links">
+      <a class="chev" href="https://selection.eu-careers.europa.eu/en/eu-careers/eu_careers_student_ambassadors"><svg width="12" height="18"><use href="#c"/></svg>Página do programa (site da EPSO)</a>
+      <a class="chev" href="https://selection.eu-careers.europa.eu/en/epso-faqs-by-category"><svg width="12" height="18"><use href="#c"/></svg>Perguntas frequentes da EPSO</a>
+      <a class="chev" href="https://selection.eu-careers.europa.eu/en/contact-us"><svg width="12" height="18"><use href="#c"/></svg>Contactar a EPSO</a>
+    </div>
+    <p class="note" style="margin-top:14px">Também podes escrever diretamente para EPSO-CAREERS-AMBASSADOR@ec.europa.eu.</p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="h-links">
+  <div class="wrap">
+    <div class="shead"><div><h2 id="h-links">Sites oficiais</h2><p class="lede">A informação desta página tem origem nestas fontes.</p></div></div>
+    <div class="official">
+      <a href="https://eu-careers.europa.eu/jobs_en"><span>EU Careers<small>Vagas e concursos da EPSO</small></span><svg width="18" height="18"><use href="#ext"/></svg></a>
+      <a href="https://traineeships.ec.europa.eu/"><span>Estágios Blue Book<small>Comissão Europeia</small></span><svg width="18" height="18"><use href="#ext"/></svg></a>
+      <a href="https://www.eca.europa.eu/en/traineeships"><span>Estágios no TCE<small>Tribunal de Contas Europeu</small></span><svg width="18" height="18"><use href="#ext"/></svg></a>
+      <a href="https://www.euaa.europa.eu/careers/traineeship"><span>Estágios na EUAA<small>Agência da União Europeia para o Asilo</small></span><svg width="18" height="18"><use href="#ext"/></svg></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div class="fbrand"><b>EU Careers<i>›</i>UMa</b><p>Página mantida pela Embaixadora EU Careers na Universidade da Madeira, para estudantes e recém-licenciados.</p></div>
+    <div><h4>Nesta página</h4><ul><li><a href="#estagios">Estágios</a></li><li><a href="#concursos">Concursos</a></li><li><a href="#temporarios">Empregos temporários</a></li><li><a href="#epso">O que é a EPSO</a></li><li><a href="#preparacao">Preparação</a></li><li><a href="#novidades">Novidades</a></li><li><a href="#h-next">Ser embaixador</a></li></ul></div>
+    <div><h4>Segue</h4><ul><li><a href="https://www.instagram.com/umaepso/">Instagram @umaepso</a></li><li><a href="https://eu-careers.europa.eu/jobs_en">EU Careers</a></li></ul></div>
+  </div>
+  <div class="wrap legal">
+    <p><strong style="color:var(--ink)">Última atualização:</strong> 21 de novembro de 2026. Confirma sempre as datas e os requisitos nos sites oficiais antes de te candidatares.</p>
+    <p>Não é um site oficial da União Europeia nem da Universidade da Madeira. Imagens: © EPSO; fotografia da Madeira: Francois Saint Leger / Unsplash.</p>
+  </div>
+</footer>
+<a class="totop" href="#inicio" aria-label="Voltar ao topo"><svg width="14" height="20" style="transform:rotate(-90deg)"><use href="#c"/></svg></a>
+
+<script>
+(function(){
+  var now=Date.now(), fmt=function(d){return d.toLocaleDateString('pt-PT',{day:'numeric',month:'long'})};
+  document.querySelectorAll('.deadline').forEach(function(el){
+    var pill=el.querySelector('.pill'), open=el.dataset.open?Date.parse(el.dataset.open):null, close=Date.parse(el.dataset.close);
+    pill.className='pill';
+    if(now>close){pill.textContent='Encerrado';el.style.borderLeftColor='var(--off)';}
+    else if(open&&now<open){pill.classList.add('soon');pill.textContent='Abre a '+fmt(new Date(open));}
+    else{pill.classList.add('open');pill.textContent='Aberto';}
+  });
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t)});
+    t.addEventListener('keydown',function(e){var n=null;if(e.key==='ArrowRight')n=tabs[(i+1)%tabs.length];if(e.key==='ArrowLeft')n=tabs[(i-1+tabs.length)%tabs.length];if(n){e.preventDefault();select(n);n.focus();}});
+  });
+  document.querySelectorAll('[data-tab]').forEach(function(a){a.addEventListener('click',function(){var t=document.getElementById(a.dataset.tab);if(t)select(t);});});
+  var menu=document.querySelector('.menu');
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.open=false;});});
+  var links=[].slice.call(document.querySelectorAll('.nav a')), top=document.querySelector('.totop');
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function onScroll(){
+    var y=window.scrollY+120, cur=-1;
+    secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top+window.scrollY<=y)cur=i;});
+    links.forEach(function(a,i){if(i===cur)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});
+    top.classList.toggle('show',window.scrollY>700);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+})();
+</script>
+
+</body>
+</html>
