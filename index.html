@@ -83,7 +83,8 @@ a:hover{text-decoration-thickness:2px}
 .btn.primary:hover{background:#00267a;border-color:#00267a}
 .btn.ghost{color:var(--blue-ink);background:transparent;border-color:var(--blue-ink)}
 .btn.ghost:hover{background:var(--tint)}
-.credit{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:12px;color:#fff;font-size:12px;background:rgba(6,14,34,.6);padding:3px 9px;border-radius:4px;z-index:1}
+.credit{position:absolute;right:max(10px,env(safe-area-inset-right,0px));bottom:8px;color:rgba(255,255,255,.75);font-size:10px;line-height:1.3;background:rgba(6,14,34,.35);padding:2px 6px;border-radius:3px;z-index:1}
+@media (max-width:700px){.credit{bottom:auto;top:216px}}
 .hero-photo{display:none}
 @media (max-width:700px){
   .hero{min-height:0;display:block;background:none}
