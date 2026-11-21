@@ -274,6 +274,29 @@ h3{font-size:21px;line-height:1.3;margin:0 0 10px;font-weight:700;color:var(--in
 .band.blue .faq .a,.band.blue .faq .a p{color:rgba(255,255,255,.92)}
 .band.blue .faq .a a{color:#ffcc00}
 .band.blue :focus-visible{outline-color:#ffcc00}
+
+/* Quiz */
+.quiz{max-width:760px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:clamp(22px,4vw,36px);box-shadow:var(--shadow)}
+.qtop{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.qcount{font-weight:800;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.qbar{flex:1;height:6px;background:var(--tint2);border-radius:99px;overflow:hidden}
+.qbar span{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}
+.qtext{font-family:var(--serif);font-size:clamp(24px,3vw,32px);line-height:1.25;color:var(--ink);margin:0 0 24px}
+.qbtns{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qb{font:inherit;font-weight:800;font-size:18px;padding:16px;border-radius:10px;border:2px solid var(--blue-ink);background:transparent;color:var(--blue-ink);cursor:pointer;transition:background .15s,color .15s}
+.qb:hover:not(:disabled){background:var(--tint)}
+.qb:disabled{cursor:default;opacity:.45}
+.qb.pick{opacity:1;background:var(--blue-ink);color:var(--bg)}
+.qans{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.qres{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:99px}
+.qres.ok{background:var(--ok-soft);color:var(--ok)}
+.qres.no{background:var(--warn-soft);color:var(--warn)}
+.qans p{margin:12px 0 8px;color:var(--ink2)}
+.qans a{font-weight:700;font-size:15px}
+.qnext{margin-top:18px;display:flex}
+.quiz [hidden]{display:none!important}
+.qend .qscore{font-family:var(--serif);font-size:clamp(30px,4vw,42px);color:var(--blue-ink);margin:0 0 6px}
+.qend p{margin:0 0 20px;color:var(--ink2)}
 /* Rodapé */
 footer{background:var(--tint);color:var(--ink2);font-size:15px;border-top:4px solid var(--gold)}
 footer a{color:var(--link)}
@@ -334,7 +357,7 @@ footer .legal p{margin:0;max-width:110ch}
     <details class="menu">
       <summary aria-label="Abrir menu"><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Menu</summary>
       <div class="panel">
-        <a href="#comecar">Por onde começar</a><a href="#calendario">Calendário</a><a href="#estagios">Estágios</a><a href="#concursos">Concursos</a><a href="#temporarios">Empregos temporários</a><a href="#epso">O que é a EPSO</a><a href="#preparacao">Preparação</a><a href="#mitos">Mitos e realidade</a><a href="#novidades">Novidades</a><a href="#embaixadora">Embaixadora</a>
+        <a href="#comecar">Por onde começar</a><a href="#calendario">Calendário</a><a href="#estagios">Estágios</a><a href="#concursos">Concursos</a><a href="#temporarios">Empregos temporários</a><a href="#epso">O que é a EPSO</a><a href="#preparacao">Preparação</a><a href="#mitos">Mito ou realidade?</a><a href="#novidades">Novidades</a><a href="#embaixadora">Embaixadora</a>
       </div>
     </details>
   </div>
@@ -366,7 +389,7 @@ footer .legal p{margin:0;max-width:110ch}
       <div class="entry"><svg width="16" height="24"><use href="#c"/></svg><a href="#temporarios">Empregos temporários</a><p>Contratos de alguns meses a alguns anos, sem esperar pelos longos ciclos dos concursos.</p></div>
       <div class="entry"><svg width="16" height="24"><use href="#c"/></svg><a href="#epso">O que é a EPSO</a><p>Quem organiza a seleção para trabalhar nas instituições da UE e a quem se destina.</p></div>
       <div class="entry"><svg width="16" height="24"><use href="#c"/></svg><a href="#preparacao">Como te preparar</a><p>Vídeos tutoriais, testes de exemplo e a Epsy, a assistente virtual da EPSO.</p></div>
-      <div class="entry"><svg width="16" height="24"><use href="#c"/></svg><a href="#mitos">Mitos e realidade</a><p>As dúvidas mais comuns sobre trabalhar na UE, respondidas.</p></div>
+      <div class="entry"><svg width="16" height="24"><use href="#c"/></svg><a href="#mitos">Mito ou realidade?</a><p>Um quiz rápido para testares o que sabes sobre trabalhar na UE.</p></div>
     </div>
   </div>
 </section>
@@ -552,10 +575,13 @@ footer .legal p{margin:0;max-width:110ch}
 
 <section class="band tint" id="mitos" aria-labelledby="h-mitos">
   <div class="wrap">
-    <div class="shead"><div><h2 id="h-mitos">Mitos e realidade</h2><p class="lede">Carrega numa afirmação para veres a resposta.</p></div></div>
-    <div class="faq">
-      <details><summary>"Para trabalhar na UE, precisas de falar 5 línguas e ter 3 doutoramentos."<span class="pm"><svg width="16" height="16"><use href="#plus"/></svg></span></summary><div class="a"><span class="verdict">Mito</span><p style="margin:0">A maioria dos lugares de entrada e dos estágios só exige 2 línguas oficiais da UE e uma licenciatura.</p></div></details>
-      <details><summary>"Os testes de seleção da UE são um pesadelo."<span class="pm"><svg width="16" height="16"><use href="#plus"/></svg></span></summary><div class="a"><span class="verdict">Mito</span><p style="margin:0">Podes preparar-te com testes de prática gratuitos online e com os vídeos tutoriais da EPSO.</p></div></details>
+    <div class="shead"><div><h2 id="h-mitos">Mito ou realidade?</h2><p class="lede">Testa o que sabes sobre trabalhar na UE. Lê cada afirmação e escolhe a tua resposta.</p></div></div>
+    <div class="quiz" id="quiz">
+      <div class="qtop"><span class="qcount" id="qcount">1 / 8</span><div class="qbar"><span id="qbar"></span></div></div>
+      <p class="qtext" id="qtext"></p>
+      <div class="qbtns" id="qbtns"><button type="button" class="qb" data-a="mito">Mito</button><button type="button" class="qb" data-a="realidade">Realidade</button></div>
+      <div class="qans" id="qans" hidden><span class="qres" id="qres"></span><p id="qexp"></p><a id="qsrc" target="_blank" rel="noopener"></a><button type="button" class="btn primary qnext" id="qnext">Seguinte<svg width="12" height="18"><use href="#c"/></svg></button></div>
+      <div class="qend" id="qend" hidden><p class="qscore" id="qscore"></p><p id="qmsg"></p><div class="btns"><button type="button" class="btn primary" id="qagain">Jogar outra vez</button><a class="btn ghost" href="#comecar">Por onde começar</a></div></div>
     </div>
   </div>
 </section>
@@ -697,6 +723,44 @@ footer .legal p{margin:0;max-width:110ch}
   }
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 })();
+
+  /* Quiz Mito ou realidade */
+  (function(){
+    var Q=[
+      ['Só se pode trabalhar na UE em Bruxelas.','mito','Há dezenas de agências da UE espalhadas pela Europa, duas delas em Lisboa (EUDA e EMSA), e Delegações da UE em todo o mundo.','https://www.eeas.europa.eu/eeas/call-expression-interest-junior-professionals-delegation-jpd-programme-2026-2028_en','Programa JPD (SEAE)'],
+      ['Os estágios nas instituições da UE não são pagos.','mito','O Blue Book paga 1 538 € por mês (referência de 2026), o Tribunal de Contas Europeu 2000 € por mês e a EUAA 1500 € por mês.','https://traineeships.ec.europa.eu/','Estágios Blue Book'],
+      ['Para o estágio Blue Book tenho de falar francês.','mito','Basta inglês, francês ou alemão em nível C1 e outra língua oficial da UE em nível B2.','https://traineeships.ec.europa.eu/','Estágios Blue Book'],
+      ['Para ser agente contratual tenho de esperar pela abertura de um concurso.','mito','A seleção de agentes contratuais está sempre aberta, com inscrição contínua e sem prazo.','https://selection.eu-careers.europa.eu/en/contract-staff-selection-procedures-always-open-registration','Agentes contratuais (EPSO)'],
+      ['Não há forma de treinar para os testes da EPSO.','mito','A EPSO disponibiliza testes de exemplo, vídeos tutoriais e a Epsy, uma assistente virtual para tirar dúvidas.','https://selection.eu-careers.europa.eu/en/selection-procedure/epso-tests','Testes da EPSO'],
+      ['Na maioria dos concursos da EPSO, tenho de ser cidadão de um Estado-Membro da UE.','realidade','Na maioria dos casos, os candidatos têm de ser cidadãos de um Estado-Membro da UE e gozar plenamente dos seus direitos. O aviso de cada concurso indica os requisitos exatos.','https://selection.eu-careers.europa.eu/en/selection-procedure/general-and-specific-eligibility-requirements','Requisitos de elegibilidade (EPSO)'],
+      ['Para trabalhar na UE, precisas de falar 5 línguas e ter 3 doutoramentos.','mito','A maioria dos lugares de entrada e dos estágios só exige 2 línguas oficiais da UE e uma licenciatura.','https://traineeships.ec.europa.eu/','Estágios Blue Book'],
+      ['Os testes de seleção da UE são um pesadelo.','mito','Podes preparar-te com testes de prática gratuitos online e com os vídeos tutoriais da EPSO.','https://selection.eu-careers.europa.eu/en/what-know-about-testing','Vídeos tutoriais (EPSO)']
+    ];
+    var $=function(id){return document.getElementById(id)}, i=0, score=0;
+    if(!$('quiz'))return;
+    var btns=[].slice.call(document.querySelectorAll('#qbtns .qb'));
+    function show(){
+      var q=Q[i]; $('qcount').textContent=(i+1)+' / '+Q.length; $('qbar').style.width=(i/Q.length*100)+'%';
+      $('qtext').textContent='"'+q[0]+'"'; $('qans').hidden=true; $('qend').hidden=true; $('qbtns').hidden=false; $('qtext').hidden=false;
+      btns.forEach(function(b){b.disabled=false;b.classList.remove('pick');});
+    }
+    btns.forEach(function(b){b.addEventListener('click',function(){
+      var q=Q[i], ok=b.dataset.a===q[1]; if(ok)score++;
+      btns.forEach(function(x){x.disabled=true;}); b.classList.add('pick');
+      var r=$('qres'); r.className='qres '+(ok?'ok':'no'); r.textContent=(ok?'Certo! ':'Não é bem assim. ')+(q[1]==='mito'?'É mito':'É realidade');
+      $('qexp').textContent=q[2]; var s=$('qsrc'); s.href=q[3]; s.textContent='Fonte: '+q[4]+' ↗';
+      $('qnext').firstChild.textContent=i===Q.length-1?'Ver resultado':'Seguinte'; $('qans').hidden=false;
+    });});
+    $('qnext').addEventListener('click',function(){
+      i++; if(i<Q.length){show();return;}
+      $('qbar').style.width='100%'; $('qcount').textContent=Q.length+' / '+Q.length;
+      $('qtext').hidden=true; $('qbtns').hidden=true; $('qans').hidden=true; $('qend').hidden=false;
+      $('qscore').textContent='Acertaste '+score+' de '+Q.length+'!';
+      $('qmsg').textContent=score===Q.length?'Excelente! Já sabes muito sobre carreiras na UE.':(score>=5?'Muito bem! Explora a página para saberes ainda mais.':'Há muito para descobrir. Começa por aqui:');
+    });
+    $('qagain').addEventListener('click',function(){i=0;score=0;show();});
+    show();
+  })();
 </script>
 
 </body>
