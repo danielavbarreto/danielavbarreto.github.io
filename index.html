@@ -139,6 +139,14 @@ h3{font-size:21px;line-height:1.3;margin:0 0 10px;font-weight:700;color:var(--in
 .pill{justify-self:start;font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--off-soft);color:var(--off)}
 .pill.open{background:var(--ok-soft);color:var(--ok)}
 .pill.soon{background:var(--warn-soft);color:var(--warn)}
+.deadline[hidden]{display:none}
+.card .pill{align-self:flex-start}
+.always-h{font-size:22px;margin:44px 0 6px}
+.always-p{color:var(--muted);margin:0 0 18px}
+.deadline.ever{border-left-color:var(--gold)}
+.deadline.ever .when{font-size:24px}
+.deadlines.ever3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.deadlines.ever3{grid-template-columns:1fr}}
 
 /* Notícias */
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
@@ -422,13 +430,22 @@ footer .legal p{margin:0;max-width:110ch}
 
 <section class="band" id="prazos" aria-labelledby="h-prazos">
   <div class="wrap">
-    <div class="shead"><div><h2 id="h-prazos">Prazos a não perder</h2><p class="lede">O estado de cada prazo atualiza-se automaticamente. Confirma sempre a data no site oficial.</p></div></div>
+    <div class="shead"><div><h2 id="h-prazos">Prazos a não perder</h2><p class="lede">Os prazos encerrados saem automaticamente desta lista. Confirma sempre a data no site oficial.</p></div></div>
     <div class="deadlines">
       <article class="deadline" data-close="2026-11-25T11:00:00Z"><span class="pill">Aberto</span><span class="when">25 nov 2026</span><span class="what">Juristas-linguistas (AD7)</span><span class="where">Até às 12:00, hora do Luxemburgo (não inclui português; o concurso com português abre a 9 de dezembro)</span><a href="#concursos">Ver detalhes</a></article>
       <article class="deadline" data-close="2026-11-30T23:59:00Z"><span class="pill">Aberto</span><span class="when">30 nov 2026</span><span class="what">Estágios no Tribunal de Contas Europeu</span><span class="where">Início a partir de abril de 2027</span><a href="#estagios" data-tab="t-tce">Ver detalhes</a></article>
       <article class="deadline" data-close="2026-12-01T11:00:00Z"><span class="pill">Aberto</span><span class="when">1 dez 2026</span><span class="what">Estágios na EUAA, em Malta</span><span class="where">Até às 12:00, hora de Malta</span><a href="#estagios" data-tab="t-euaa">Ver detalhes</a></article>
       <article class="deadline" data-open="2026-12-09T00:00:00Z" data-close="2027-01-20T23:59:00Z"><span class="pill soon">Em breve</span><span class="when">9 dez 2026 a 20 jan 2027</span><span class="what">Juristas-linguistas com português (EPSO/AD/432/26)</span><span class="where">Datas previstas pela EPSO</span><a href="https://selection.eu-careers.europa.eu/en/upcoming-selection-procedures" target="_blank" rel="noopener">Ver na EPSO</a></article>
+      <article class="deadline" data-plan="1" data-close="2027-01-31T23:59:00Z"><span class="pill soon">Previsto</span><span class="when">janeiro 2027</span><span class="what">Juristas, "Lawyers 1" (AD 7)</span><span class="where">Concurso previsto pela EPSO em 4 domínios do Direito</span><a href="https://selection.eu-careers.europa.eu/en/upcoming-selection-procedures" target="_blank" rel="noopener">Ver na EPSO</a></article>
+      <article class="deadline" data-plan="1" data-close="2027-02-28T23:59:00Z"><span class="pill soon">Previsto</span><span class="when">fevereiro 2027</span><span class="what">Juristas, "Lawyers 2" (AD)</span><span class="where">Concurso previsto pela EPSO em 4 domínios do Direito</span><a href="https://selection.eu-careers.europa.eu/en/upcoming-selection-procedures" target="_blank" rel="noopener">Ver na EPSO</a></article>
       <article class="deadline" data-open="2027-02-15T09:00:00Z" data-close="2027-03-12T09:00:00Z"><span class="pill soon">Em breve</span><span class="when">15 fev a 12 mar 2027</span><span class="what">Estágio Blue Book, sessão de outubro de 2027</span><span class="where">Até às 10:00, hora de Bruxelas</span><a href="#estagios" data-tab="t-bb">Ver detalhes</a></article>
+    </div>
+    <h3 class="always-h">Sempre abertos</h3>
+    <p class="always-p">Oportunidades sem prazo fixo, para não ficares à espera do próximo concurso.</p>
+    <div class="deadlines ever3">
+      <article class="deadline ever"><span class="pill open">Sempre aberto</span><span class="when">Sem prazo</span><span class="what">Agentes contratuais (CAST Permanent)</span><span class="where">Inscrição contínua por perfil: administração, comunicação, finanças, direito, informática, tradução e outros. No grupo de funções IV, exige pelo menos três anos de estudos universitários concluídos.</span><a href="https://selection.eu-careers.europa.eu/en/contract-staff-selection-procedures-always-open-registration" target="_blank" rel="noopener">Inscrever-me na EPSO</a></article>
+      <article class="deadline ever"><span class="pill open">Sempre aberto</span><span class="when">Vagas atuais</span><span class="what">Empregos temporários</span><span class="where">Vagas de agentes temporários e contratuais em instituições e agências da UE, incluindo em Lisboa.</span><a href="https://eu-careers.europa.eu/jobs_en" target="_blank" rel="noopener">Ver vagas temporárias</a></article>
+      <article class="deadline ever"><span class="pill open">Ao longo do ano</span><span class="when">Agências da UE</span><span class="what">Estágios em agências</span><span class="where">Cada agência tem o seu calendário. Algumas, como o Banco Central Europeu, a EBA ou o ECDC, não têm data fixa de início.</span><a href="https://eu-careers.europa.eu/en/job-opportunities/traineeships?institution=All" target="_blank" rel="noopener">Ver estágios na EU Careers</a></article>
     </div>
   </div>
 </section>
@@ -601,7 +618,7 @@ footer .legal p{margin:0;max-width:110ch}
   <div class="wrap">
     <div class="shead"><div><h2 id="h-nov">Novidades</h2><p class="lede">As publicações mais recentes da Embaixadora EU Careers na UMa.</p></div><a class="chev" href="https://www.instagram.com/umaepso/" target="_blank" rel="noopener"><svg width="12" height="18"><use href="#c"/></svg>Todas as publicações no Instagram</a></div>
     <div class="cards">
-      <article class="card">
+      <article class="card" data-close="2026-12-01T11:00:00Z">
         <img alt="Mãos a segurar um globo iluminado ao pôr do sol" src="05_epso.jpg">
         <div class="body"><span class="tagline">Estágios</span><h3><a href="https://www.euaa.europa.eu/careers/traineeship" target="_blank" rel="noopener">Estágio de última hora na EUAA, em Malta</a></h3><p>Estágios de até 6 meses, com início em março ou abril de 2027 e bolsa de 1500 € por mês. Candidaturas até 1 de dezembro de 2026.</p><span class="cta">Candidatar-me na EUAA <svg width="14" height="14"><use href="#ext"/></svg></span><time datetime="2026-11-21">21 de novembro de 2026</time></div>
       </article>
@@ -609,11 +626,11 @@ footer .legal p{margin:0;max-width:110ch}
         <img alt="Passaportes sobre a bandeira da União Europeia" src="08_novidade_temporarios.jpg">
         <div class="body"><span class="tagline">Empregos temporários</span><h3><a href="https://eu-careers.europa.eu/jobs_en" target="_blank" rel="noopener">Empregos temporários e estágios em agências, incluindo em Lisboa</a></h3><p>Os concursos não são a única porta de entrada nas instituições europeias.</p><span class="cta">Ver na EPSO <svg width="14" height="14"><use href="#ext"/></svg></span><time datetime="2026-11-19">19 de novembro de 2026</time></div>
       </article>
-      <article class="card">
+      <article class="card" data-close="2026-11-30T23:59:00Z">
         <img alt="Mãos de várias pessoas juntas ao centro" src="07_novidade_tce.jpg">
         <div class="body"><span class="tagline">Estágios</span><h3><a href="https://www.eca.europa.eu/en/traineeships" target="_blank" rel="noopener">O Tribunal de Contas Europeu também oferece estágios remunerados</a></h3><p>Candidaturas até 30 de novembro de 2026, para estágios de 6 meses a partir de abril de 2027.</p><span class="cta">Ver no Tribunal de Contas <svg width="14" height="14"><use href="#ext"/></svg></span><time datetime="2026-10-31">31 de outubro de 2026</time></div>
       </article>
-      <article class="card">
+      <article class="card" data-close="2026-11-25T11:00:00Z">
         <img alt="Pessoa a trabalhar num portátil com formulários digitais" src="06_novidade_juristas.jpg">
         <div class="body"><span class="tagline">Concursos</span><h3><a href="https://selection.eu-careers.europa.eu/en/apply-lawyer-linguists-competition-ad7" target="_blank" rel="noopener">Novo concurso da EPSO: juristas-linguistas no Tribunal de Justiça da UE</a></h3><p>Para traduzir textos jurídicos complexos a partir de pelo menos duas outras línguas oficiais da UE, incluindo o francês. Exige licenciatura em Direito (não inclui português; o concurso com português abre a 9 de dezembro).</p><span class="cta">Ver na EPSO <svg width="14" height="14"><use href="#ext"/></svg></span><time datetime="2026-10-29">29 de outubro de 2026</time></div>
       </article>
@@ -708,13 +725,15 @@ footer .legal p{margin:0;max-width:110ch}
 <script>
 (function(){
   var now=Date.now(), fmt=function(d){return d.toLocaleDateString('pt-PT',{day:'numeric',month:'long'})};
-  document.querySelectorAll('.deadline').forEach(function(el){
+  document.querySelectorAll('.deadline:not(.ever)').forEach(function(el){
     var pill=el.querySelector('.pill'), open=el.dataset.open?Date.parse(el.dataset.open):null, close=Date.parse(el.dataset.close);
     pill.className='pill';
-    if(now>close){pill.textContent='Encerrado';el.style.borderLeftColor='var(--off)';}
+    if(now>close){el.hidden=true;}
+    else if(el.dataset.plan){pill.classList.add('soon');pill.textContent='Previsto';}
     else if(open&&now<open){pill.classList.add('soon');pill.textContent='Abre a '+fmt(new Date(open));}
     else{pill.classList.add('open');pill.textContent='Aberto';}
   });
+  document.querySelectorAll('.card[data-close]').forEach(function(c){if(now>Date.parse(c.dataset.close)){var p=document.createElement('span');p.className='pill';p.textContent='Candidaturas encerradas';var b=c.querySelector('.body');b.insertBefore(p,b.firstChild);}});
   var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
   function select(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
   tabs.forEach(function(t,i){
