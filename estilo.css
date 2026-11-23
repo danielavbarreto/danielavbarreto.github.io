@@ -33,8 +33,10 @@ a { color: var(--azul-2); }
 .menu a { color: #fff; text-decoration: none; font-weight: 600; font-size: .95rem; }
 .menu a:hover { color: var(--ouro); }
 .topo-acoes { display: flex; align-items: center; gap: .6rem; order: 3; }
-.lang-btn { background: none; border: 1px solid var(--ouro); color: var(--ouro); padding: .3rem .7rem; border-radius: 4px; font: inherit; font-weight: 700; font-size: .85rem; cursor: pointer; }
-.lang-btn:hover { background: var(--ouro); color: var(--azul); }
+.lang { display: flex; border: 1px solid var(--ouro); border-radius: 4px; overflow: hidden; }
+.lang-op { background: none; border: 0; color: #fff; padding: .3rem .6rem; font: inherit; font-weight: 700; font-size: .85rem; cursor: pointer; }
+.lang-op[aria-pressed="true"] { background: var(--ouro); color: var(--azul); }
+.lang-op:hover:not([aria-pressed="true"]) { color: var(--ouro); }
 .menu-btn { display: none; background: none; border: 1px solid var(--ouro); color: #fff; padding: .35rem .8rem; border-radius: 4px; font: inherit; }
 
 /* hero */

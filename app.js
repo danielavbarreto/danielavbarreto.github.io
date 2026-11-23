@@ -27,7 +27,7 @@
       semRes: "Não há oportunidades com esta combinação de filtros.", verTodas: "Ver todas as oportunidades",
       calPrev: "Previsto", calAbre: "Abre", calUltimo: "Último dia", calMes: "Durante o mês", badge: "previsto",
       realidade: "Realidade", mito: "Mito", certo: "Certo! ", errado: "Não exatamente. ",
-      locale: "pt-PT", btn: "EN", btnLabel: "View this page in English", btnLang: "en"
+      locale: "pt-PT"
     },
     en: {
       tipos: { bolsa: "Scholarships", estagio: "Traineeships", mobilidade: "Mobility", voluntariado: "Volunteering", emprego: "EU jobs", evento: "Events and programmes", curso: "Free courses" },
@@ -40,7 +40,7 @@
       semRes: "There are no opportunities matching these filters.", verTodas: "See all opportunities",
       calPrev: "Expected", calAbre: "Opens", calUltimo: "Last day", calMes: "During the month", badge: "expected",
       realidade: "Reality", mito: "Myth", certo: "Correct! ", errado: "Not quite. ",
-      locale: "en-GB", btn: "PT", btnLabel: "Ver esta página em português", btnLang: "pt"
+      locale: "en-GB"
     }
   };
 
@@ -301,8 +301,7 @@
     document.title = META[LANG].title;
     const md = document.querySelector('meta[name="description"]');
     if (md && META[LANG].desc) md.content = META[LANG].desc;
-    const b = document.getElementById("lang-btn");
-    b.textContent = t().btn; b.lang = t().btnLang; b.setAttribute("aria-label", t().btnLabel);
+    document.querySelectorAll(".lang-op").forEach((b) => b.setAttribute("aria-pressed", b.dataset.lang === LANG));
     document.getElementById("atualizado").textContent = fmtDia(data(ULTIMA_ATUALIZACAO));
   }
 
@@ -310,8 +309,9 @@
     textosFixos(); emBreve(); chips(); catalogo(); prazos(); previstos(); quiz();
   }
 
-  document.getElementById("lang-btn").addEventListener("click", () => {
-    LANG = LANG === "en" ? "pt" : "en";
+  document.querySelectorAll(".lang-op").forEach((b) => b.addEventListener("click", () => {
+    if (b.dataset.lang === LANG) return;
+    LANG = b.dataset.lang;
     try { localStorage.setItem("lang", LANG); } catch (e) { /* ignorar */ }
     try {
       const u = new URL(location.href);
@@ -319,7 +319,7 @@
       history.replaceState(null, "", u);
     } catch (e) { /* ignorar */ }
     desenhar();
-  });
+  }));
 
   ligarFiltros(); menu(); desenhar();
 })();
