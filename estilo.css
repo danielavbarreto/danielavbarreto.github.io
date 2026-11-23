@@ -77,6 +77,10 @@ a { color: var(--azul-2); }
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; }
 .chip { border: 1px solid var(--azul); background: #fff; color: var(--azul); border-radius: 999px; padding: .35rem .9rem; font: inherit; font-size: .92rem; cursor: pointer; }
 .chip[aria-pressed="true"] { background: var(--azul); color: #fff; }
+.chip .n { font-size: .8rem; opacity: .7; margin-left: .15rem; }
+.chip.vazio { opacity: .45; }
+.sem-resultados { grid-column: 1 / -1; padding: 1.5rem; border: 1px dashed var(--linha); border-radius: 6px; text-align: center; }
+.sem-resultados p { margin: 0 0 .4rem; color: var(--suave); }
 .selects { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; }
 .selects label { display: grid; gap: .2rem; font-size: .88rem; font-weight: 600; color: var(--suave); }
 .selects select { font: inherit; padding: .4rem; border: 1px solid var(--linha); border-radius: 4px; min-width: 190px; }

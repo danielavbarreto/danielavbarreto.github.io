@@ -69,8 +69,26 @@
   function chips() {
     const box = document.getElementById("chips-tipo");
     const lista = [["", "Todas"], ...Object.entries(TIPOS)];
-    box.innerHTML = lista.map(([k, v]) => `<button class="chip" data-tipo="${k}" aria-pressed="${filtro.tipo === k}">${v}</button>`).join("");
+    box.innerHTML = lista.map(([k, v]) => {
+      const n = OPORTUNIDADES.filter(visivel).filter((o) => passa(o, k)).length;
+      return `<button class="chip${n ? "" : " vazio"}" data-tipo="${k}" aria-pressed="${filtro.tipo === k}">${v} <span class="n">${n}</span></button>`;
+    }).join("");
     box.querySelectorAll(".chip").forEach((b) => b.addEventListener("click", () => { filtro.tipo = b.dataset.tipo; chips(); catalogo(); }));
+  }
+
+  function passa(o, tipo) {
+    return (!tipo || o.tipo === tipo) &&
+      (!filtro.nivel || o.nivel.includes(filtro.nivel) || o.nivel.includes("todos")) &&
+      (!filtro.destino || o.destino === filtro.destino || (filtro.destino === "portugal" && o.emPortugal)) &&
+      (!filtro.abertas || estado(o).aberto);
+  }
+
+  function limpar() {
+    filtro.tipo = ""; filtro.nivel = ""; filtro.destino = ""; filtro.abertas = false;
+    document.getElementById("f-nivel").value = "";
+    document.getElementById("f-destino").value = "";
+    document.getElementById("f-abertas").checked = false;
+    chips(); catalogo();
   }
 
   function catalogo() {
@@ -82,12 +100,7 @@
       if (o.sempreAberto) return 3;
       return 4;
     };
-    const itens = OPORTUNIDADES.filter(visivel).filter((o) =>
-      (!filtro.tipo || o.tipo === filtro.tipo) &&
-      (!filtro.nivel || o.nivel.includes(filtro.nivel) || o.nivel.includes("todos")) &&
-      (!filtro.destino || o.destino === filtro.destino) &&
-      (!filtro.abertas || estado(o).aberto)
-    ).sort((a, b) => ordem(a) - ordem(b));
+    const itens = OPORTUNIDADES.filter(visivel).filter((o) => passa(o, filtro.tipo)).sort((a, b) => ordem(a) - ordem(b));
 
     document.getElementById("contagem").textContent = itens.length === 1 ? "1 oportunidade" : `${itens.length} oportunidades`;
     document.getElementById("catalogo").innerHTML = itens.map((o) => {
@@ -108,14 +121,16 @@
           <a class="oficial" href="${esc(o.link)}" ${ext}>Página oficial ↗</a>
         </div>
       </article>`;
-    }).join("") || "<p>Nenhuma oportunidade com estes filtros.</p>";
+    }).join("") || `<div class="sem-resultados"><p>Não há oportunidades com esta combinação de filtros.</p><button type="button" class="btn btn-azul" id="limpar">Ver todas as oportunidades</button></div>`;
+    const bl = document.getElementById("limpar");
+    if (bl) bl.addEventListener("click", limpar);
   }
 
   function ligarFiltros() {
     const n = document.getElementById("f-nivel"), d = document.getElementById("f-destino"), a = document.getElementById("f-abertas");
-    n.addEventListener("change", () => { filtro.nivel = n.value; catalogo(); });
-    d.addEventListener("change", () => { filtro.destino = d.value; catalogo(); });
-    a.addEventListener("change", () => { filtro.abertas = a.checked; catalogo(); });
+    n.addEventListener("change", () => { filtro.nivel = n.value; chips(); catalogo(); });
+    d.addEventListener("change", () => { filtro.destino = d.value; chips(); catalogo(); });
+    a.addEventListener("change", () => { filtro.abertas = a.checked; chips(); catalogo(); });
     document.querySelectorAll(".perfil").forEach((b) => b.addEventListener("click", () => {
       filtro.nivel = b.dataset.nivel || ""; filtro.tipo = b.dataset.tipo || "";
       n.value = filtro.nivel; chips(); catalogo();

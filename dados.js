@@ -10,6 +10,7 @@
     tipo          bolsa | estagio | mobilidade | voluntariado | emprego | evento | curso
     nivel         lista: secundario | licenciatura | finalista | licenciado | mestrado | doutoramento | todos
     destino       ue | portugal | eua | franca | mundo | online
+    emPortugal    true se também há vagas ou uma fase em Portugal (aparece no filtro Portugal)
     paraQuem      requisitos principais (curto)
     apoio         financiamento / o que recebes
     duracao       duração
@@ -76,7 +77,7 @@ const OPORTUNIDADES = [
     revisto: "2026-11-21"
   },
   {
-    id: "cast",
+    id: "cast", emPortugal: true,
     titulo: "Agentes contratuais (CAST permanente)",
     entidade: "EPSO · instituições e agências da UE",
     tipo: "emprego", nivel: ["finalista", "licenciado", "mestrado"], destino: "ue",
@@ -88,7 +89,7 @@ const OPORTUNIDADES = [
     revisto: "2026-11-21"
   },
   {
-    id: "temporarios-ue",
+    id: "temporarios-ue", emPortugal: true,
     titulo: "Empregos temporários e de agente contratual",
     entidade: "Instituições e agências da UE",
     tipo: "emprego", nivel: ["licenciado", "mestrado", "doutoramento"], destino: "ue",
@@ -177,7 +178,7 @@ const OPORTUNIDADES = [
     revisto: "2026-11-22"
   },
   {
-    id: "agencias-estagios",
+    id: "agencias-estagios", emPortugal: true,
     titulo: "Estágios em agências da UE (BCE, EBA, ECDC e outras)",
     entidade: "Agências e organismos da UE",
     tipo: "estagio", nivel: ["finalista", "licenciado", "mestrado"], destino: "ue",
@@ -189,7 +190,7 @@ const OPORTUNIDADES = [
     revisto: "2026-11-21"
   },
   {
-    id: "inov-contacto",
+    id: "inov-contacto", emPortugal: true,
     titulo: "INOV Contacto: estágios internacionais pagos",
     entidade: "AICEP",
     tipo: "estagio", nivel: ["licenciado", "mestrado"], destino: "mundo",
