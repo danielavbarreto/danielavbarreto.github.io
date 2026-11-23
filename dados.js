@@ -23,6 +23,7 @@
     quando        texto livre quando não há data exata
     link          página OFICIAL
     revisto       data em que confirmaste a informação
+    artigo        ligação para um artigo meu sobre o tema (opcional)
 */
 
 const OPORTUNIDADES = [
@@ -150,6 +151,7 @@ const OPORTUNIDADES = [
     abre: "2027-02-15T10:00+01:00", fecha: "2027-03-12T10:00+01:00",
     recorrente: "Duas candidaturas por ano: fevereiro-março e julho-setembro",
     link: "https://traineeships.ec.europa.eu/",
+    artigo: "https://www.linkedin.com/pulse/european-commissions-blue-book-how-access-traineeship-daniela-barreto-fioke/",
     revisto: "2026-11-22"
   },
   {
@@ -184,9 +186,10 @@ const OPORTUNIDADES = [
     tipo: "estagio", nivel: ["finalista", "licenciado", "mestrado"], destino: "ue",
     paraQuem: "Varia por agência.",
     apoio: "Geralmente remunerados.",
-    duracao: "Varia",
+    duracao: "Varia: EMA 10 meses, EUDA até 11, EASA 12, Centro de Tradução 3 a 12 meses",
     sempreAberto: true,
     link: "https://eu-careers.europa.eu/en/job-opportunities/traineeships?institution=All",
+    artigo: "https://www.linkedin.com/pulse/traineeships-eu-beyond-brussels-map-agencies-many-students-barreto-bpwyc/",
     revisto: "2026-11-21"
   },
   {
@@ -396,7 +399,7 @@ const EN_DADOS = {
   "blue-book": { titulo: "Blue Book traineeship (European Commission)", entidade: "European Commission and other EU bodies", paraQuem: "A completed bachelor's degree of at least 3 years, with the diploma in hand when you apply. English, French or German at C1 and another EU language at B2. No more than 6 weeks of previous experience at the EU institutions.", apoio: "Around €1,538 a month (2026 figure)", duracao: "5 months (1 October 2027 to 29 February 2028)", recorrente: "Two application rounds a year: February to March and July to September" },
   "schuman": { titulo: "Schuman traineeships at the European Parliament", entidade: "European Parliament", paraQuem: "Aged 18 or over, nationality of an EU country, a full university degree and the language requirements. You must not have worked or done a traineeship for more than two months at an EU institution.", apoio: "Monthly allowance (varies with the place of assignment).", duracao: "5 months", recorrente: "Two application rounds a year: in May (traineeship from October to February) and in October (traineeship from March to July)" },
   "jpd": { entidade: "European External Action Service", paraQuem: "EU nationals with a master's degree and excellent English and/or French. Applications go through the national authority.", apoio: "€2,500 a month, plus €1,700 a month for accommodation and contributions towards travel and insurance", duracao: "12 months, renewable for another 12", quando: "A call every two years. The last one, for the 2026 to 2028 round, was open in April 2025." },
-  "agencias-estagios": { titulo: "Traineeships at EU agencies (ECB, EBA, ECDC and others)", entidade: "EU agencies and bodies", paraQuem: "Varies by agency.", apoio: "Usually paid.", duracao: "Varies" },
+  "agencias-estagios": { titulo: "Traineeships at EU agencies (ECB, EBA, ECDC and others)", entidade: "EU agencies and bodies", paraQuem: "Varies by agency.", apoio: "Usually paid.", duracao: "Varies: EMA 10 months, EUDA up to 11, EASA 12, Translation Centre 3 to 12 months" },
   "inov-contacto": { titulo: "INOV Contacto: paid international traineeships", paraQuem: "A completed bachelor's or integrated master's degree, legal residence in Portugal and aged up to 29. You can only take part once.", apoio: "Monthly grant (2.76 × IAS) during the phase in Portugal; travel, accommodation and insurance during the phase abroad.", duracao: "Varies by edition", quando: "Applications for the 29th edition opened in September 2026. The next edition is announced on the official website." },
   "onu-estagios": { titulo: "United Nations internships", entidade: "UN Secretariat and agencies", paraQuem: "Students or recent graduates. Vacancies are published throughout the year.", apoio: "Varies by agency.", duracao: "2 to 6 months" },
   "eiffel": { titulo: "France Excellence Eiffel scholarships", entidade: "French Ministry for Europe and Foreign Affairs · Campus France", paraQuem: "International students aged up to 29 (master's) or 35 (PhD). Only the French university can submit the application. Check the rules to see whether EU citizens are eligible.", apoio: "Monthly allowance and other costs (see the rules).", duracao: "12 to 24 months (master's)", quando: "The university sends the application to Campus France by 6 January 2027. Each university has an earlier internal deadline, so contact yours now." },

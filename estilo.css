@@ -59,6 +59,12 @@ a { color: var(--azul-2); }
 .bloco-azul h2, .bloco-azul h3 { color: #fff; }
 .link-claro { color: var(--ouro); }
 .sobre-foto { display: block; width: 220px; max-width: 60%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 8px; border: 3px solid var(--ouro); margin: 0 0 1.2rem; }
+.cast-linha { margin: 1.6rem 0 0; padding: .8rem 1rem; background: var(--fundo-claro); border-left: 4px solid var(--azul); }
+.le-mais { margin-top: 1.6rem; padding: 1.2rem 1.3rem; border: 1px solid var(--linha); border-top: 4px solid var(--ouro); border-radius: 6px; }
+.le-mais h3 { margin-top: 0; }
+.artigos { padding-left: 1.1rem; margin: .4rem 0 .6rem; }
+.artigos li { margin-bottom: .45rem; }
+.ficha .artigo { font-size: .9rem; margin: 0 0 .7rem; }
 .sobre-papel { color: var(--ouro-claro); font-size: .95rem; }
 .intro { color: var(--suave); max-width: 720px; margin-top: 0; }
 .nota { color: var(--suave); font-size: .9rem; margin-top: 0; }

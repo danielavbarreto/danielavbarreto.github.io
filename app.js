@@ -23,7 +23,7 @@
       fechaHoje: "Fecha hoje ou amanhã", fechaEm: (d) => `Fecha em ${d} dias`, abertoAte: "Aberto até ", verDatas: "Ver datas",
       nadaBreve: "Nada a fechar nos próximos 30 dias. Espreita os prazos mais abaixo.", hojeAmanha: "Hoje/amanhã", dias: (d) => d + " dias", ate: "Até ",
       contagem: (n) => n === 1 ? "1 oportunidade" : `${n} oportunidades`,
-      paraQuem: "Para quem", apoio: "O que recebes", duracao: "Duração", quando: "Quando", oficial: "Página oficial ↗",
+      artigo: "Lê o meu artigo sobre este tema ↗", paraQuem: "Para quem", apoio: "O que recebes", duracao: "Duração", quando: "Quando", oficial: "Página oficial ↗",
       semRes: "Não há oportunidades com esta combinação de filtros.", verTodas: "Ver todas as oportunidades",
       calPrev: "Previsto", calAbre: "Abre", calUltimo: "Último dia", calMes: "Durante o mês", badge: "previsto",
       realidade: "Realidade", mito: "Mito", certo: "Certo! ", errado: "Não exatamente. ",
@@ -36,7 +36,7 @@
       fechaHoje: "Closes today or tomorrow", fechaEm: (d) => `Closes in ${d} days`, abertoAte: "Open until ", verDatas: "See dates",
       nadaBreve: "Nothing closes in the next 30 days. Have a look at the deadlines further down.", hojeAmanha: "Today/tomorrow", dias: (d) => d + " days", ate: "Until ",
       contagem: (n) => n === 1 ? "1 opportunity" : `${n} opportunities`,
-      paraQuem: "Who it is for", apoio: "What you get", duracao: "Duration", quando: "When", oficial: "Official page ↗",
+      artigo: "Read my article on this topic ↗", paraQuem: "Who it is for", apoio: "What you get", duracao: "Duration", quando: "When", oficial: "Official page ↗",
       semRes: "There are no opportunities matching these filters.", verTodas: "See all opportunities",
       calPrev: "Expected", calAbre: "Opens", calUltimo: "Last day", calMes: "During the month", badge: "expected",
       realidade: "Reality", mito: "Myth", certo: "Correct! ", errado: "Not quite. ",
@@ -74,6 +74,9 @@
     "carr.l1": "EPSO tutorial videos", "carr.l2": "Sample tests", "carr.l3": "Epsy, EPSO's AI assistant", "carr.l4": "Frequently asked questions",
     "carr.prev.h": "Upcoming EPSO competitions", "carr.prev.p": "Indicative dates published by EPSO.", "carr.prev.b": "See them all on the EPSO website",
     "quiz.h": "Myth or reality?",
+    "carr.cast": "<strong>Contract staff (CAST Permanent):</strong> registration is always open and, if you pass the tests, your result is valid for 10 years.",
+    "lemais.h": "Read more", "lemais.p": "My articles in The EU Briefing, my newsletter on LinkedIn.", "lemais.b": "Subscribe to The EU Briefing",
+    "sobre.nl": "Subscribe to my newsletter",
     "sobre.papel": "Daniela Barreto · EU Careers Student Ambassador · Universidade da Madeira · October 2026 to October 2027<br>Official programme of the European Personnel Selection Office (EPSO)",
     "sobre.p1": "I am in the final year of my degree in Languages and Business Relations at Universidade da Madeira and the official EU Careers Ambassador at my university. My role is to bring students closer to job opportunities in the European institutions: competitions, traineeships such as the Blue Book or the Schuman traineeships, and temporary contracts.",
     "sobre.p2": "I am an institutional communication trainee at the United Nations Regional Information Centre (UNRIC) and I write The EU Briefing, a newsletter on digital policy and EU careers. I speak Spanish, English, Portuguese and German.",
@@ -201,6 +204,7 @@
           <dt>${L.duracao}</dt><dd>${esc(c(o, "duracao"))}</dd>
           ${quando ? `<dt>${L.quando}</dt><dd>${esc(quando)}</dd>` : ""}
         </dl>
+        ${o.artigo ? `<p class="artigo"><a href="${esc(o.artigo)}" ${ext}>${L.artigo}</a></p>` : ""}
         <div class="rodape-ficha">
           <span class="estado ${e.cls}">${e.txt}</span>
           <a class="oficial" href="${esc(o.link)}" ${ext}>${L.oficial}</a>
