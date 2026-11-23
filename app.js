@@ -258,14 +258,14 @@
   const QUIZ = {
     pt: [
       ["Só quem estudou Direito ou Relações Internacionais pode trabalhar na UE.", false, "Mito. Há concursos e seleções para línguas, comunicação, economia, finanças, informática, ciências e muito mais."],
-      ["É preciso falar pelo menos duas línguas da UE.", true, "Realidade. Na maioria das seleções pedem uma língua principal (C1) e uma segunda (B2), quase sempre inglês, francês ou alemão."],
+      ["É preciso falar pelo menos duas línguas da UE.", true, "Realidade. A maioria das seleções pede pelo menos duas línguas oficiais da UE, com o nível exigido indicado em cada anúncio (muitas vezes C1 e B2)."],
       ["Os estágios nas instituições da UE não são pagos.", false, "Mito. Os estágios Blue Book, Schuman e do Conselho são remunerados (cerca de 1 538 € por mês no Blue Book)."],
       ["Para trabalhar na UE tens de viver em Bruxelas.", false, "Mito. Há instituições no Luxemburgo e em Estrasburgo e agências em toda a Europa, incluindo duas em Lisboa (EMSA e EUDA)."],
       ["Posso candidatar-me a agente contratual em qualquer altura do ano.", true, "Realidade. A seleção CAST permanente está sempre aberta."]
     ],
     en: [
       ["Only people who studied law or international relations can work for the EU.", false, "Myth. There are competitions and selection procedures for languages, communication, economics, finance, IT, science and much more."],
-      ["You need to speak at least two EU languages.", true, "Reality. Most selection procedures ask for a main language (C1) and a second one (B2), almost always English, French or German."],
+      ["You need to speak at least two EU languages.", true, "Reality. Most selection procedures ask for at least two official EU languages, with the required level set out in each notice (often C1 and B2)."],
       ["Traineeships at the EU institutions are unpaid.", false, "Myth. The Blue Book, Schuman and Council traineeships are paid (around €1,538 a month for the Blue Book)."],
       ["To work for the EU you have to live in Brussels.", false, "Myth. There are institutions in Luxembourg and Strasbourg and agencies all over Europe, including two in Lisbon (EMSA and EUDA)."],
       ["I can apply to become contract staff at any time of the year.", true, "Reality. The CAST Permanent selection is always open."]
