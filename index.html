@@ -18,21 +18,24 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilo.css?v=20261123">
+  <link rel="stylesheet" href="estilo.css?v=20261123b">
 </head>
 <body>
-  <a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
+  <a class="saltar" href="#conteudo" data-i18n="saltar">Saltar para o conteúdo</a>
 
   <header class="topo">
     <div class="topo-in">
       <a class="marca" href="#inicio">Daniela <span>V.</span> Barreto</a>
-      <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+      <div class="topo-acoes">
+        <button class="lang-btn" id="lang-btn" type="button" lang="en" aria-label="View this page in English">EN</button>
+        <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+      </div>
       <nav id="menu" class="menu" aria-label="Principal">
-        <a href="#inicio">Início</a>
-        <a href="#oportunidades">Oportunidades</a>
-        <a href="#prazos">Prazos</a>
-        <a href="#carreiras">Carreiras na UE</a>
-        <a href="#sobre">Sobre mim</a>
+        <a href="#inicio" data-i18n="nav.inicio">Início</a>
+        <a href="#oportunidades" data-i18n="nav.oport">Oportunidades</a>
+        <a href="#prazos" data-i18n="nav.prazos">Prazos</a>
+        <a href="#carreiras" data-i18n="nav.carr">Carreiras na UE</a>
+        <a href="#sobre" data-i18n="nav.sobre">Sobre mim</a>
       </nav>
     </div>
   </header>
@@ -43,33 +46,33 @@
     <section id="inicio" class="hero">
       <div class="circulos" aria-hidden="true"></div>
       <div class="hero-in">
-        <p class="sobretitulo">Guia para estudantes da Madeira e de Portugal</p>
-        <h1>Bolsas, estágios e oportunidades para construíres uma carreira internacional</h1>
-        <p class="lead">Reúno num só lugar as bolsas de estudo, os estágios, o voluntariado e as carreiras na União Europeia e na ONU, sempre com ligação à fonte oficial.</p>
+        <p class="sobretitulo" data-i18n="hero.sobre">Guia para estudantes da Madeira e de Portugal</p>
+        <h1 data-i18n="hero.h1">Bolsas, estágios e oportunidades para construíres uma carreira internacional</h1>
+        <p class="lead" data-i18n="hero.lead">Reúno num só lugar as bolsas de estudo, os estágios, o voluntariado e as carreiras na União Europeia e na ONU, sempre com ligação à fonte oficial.</p>
         <div class="botoes">
-          <a class="btn btn-ouro" href="#oportunidades">Ver oportunidades</a>
-          <a class="btn btn-linha" href="#prazos">Ver prazos</a>
+          <a class="btn btn-ouro" href="#oportunidades" data-i18n="hero.b1">Ver oportunidades</a>
+          <a class="btn btn-linha" href="#prazos" data-i18n="hero.b2">Ver prazos</a>
         </div>
       </div>
     </section>
 
     <section class="bloco" aria-labelledby="t-breve">
       <div class="in">
-        <h2 id="t-breve">Fecham em breve</h2>
+        <h2 id="t-breve" data-i18n="breve.h">Fecham em breve</h2>
         <ul id="em-breve" class="lista-breve"></ul>
       </div>
     </section>
 
     <section class="bloco bloco-claro" aria-labelledby="t-comecar">
       <div class="in">
-        <h2 id="t-comecar">Por onde começar?</h2>
-        <p class="intro">Escolhe o teu perfil e vê as oportunidades que fazem sentido para ti agora.</p>
+        <h2 id="t-comecar" data-i18n="comecar.h">Por onde começar?</h2>
+        <p class="intro" data-i18n="comecar.p">Escolhe o teu perfil e vê as oportunidades que fazem sentido para ti agora.</p>
         <div class="perfis">
-          <button class="perfil" data-nivel="licenciatura"><strong>Ainda estou a estudar</strong><span>Erasmus+, DiscoverEU, voluntariado, eventos</span></button>
-          <button class="perfil" data-nivel="finalista"><strong>Estou no último ano</strong><span>Estágios em agências, Erasmus Mundus, bolsas de mestrado</span></button>
-          <button class="perfil" data-nivel="licenciado"><strong>Já sou licenciado/a</strong><span>Blue Book, Schuman, Conselho, INOV Contacto</span></button>
-          <button class="perfil" data-nivel="mestrado"><strong>Tenho mestrado</strong><span>JPD, concursos EPSO, doutoramento</span></button>
-          <button class="perfil" data-tipo="emprego"><strong>Quero trabalhar já</strong><span>Agentes contratuais e empregos temporários na UE</span></button>
+          <button class="perfil" data-nivel="licenciatura" data-i18n="perfil.1"><strong>Ainda estou a estudar</strong><span>Erasmus+, DiscoverEU, voluntariado, eventos</span></button>
+          <button class="perfil" data-nivel="finalista" data-i18n="perfil.2"><strong>Estou no último ano</strong><span>Estágios em agências, Erasmus Mundus, bolsas de mestrado</span></button>
+          <button class="perfil" data-nivel="licenciado" data-i18n="perfil.3"><strong>Já sou licenciado/a</strong><span>Blue Book, Schuman, Conselho, INOV Contacto</span></button>
+          <button class="perfil" data-nivel="mestrado" data-i18n="perfil.4"><strong>Tenho mestrado</strong><span>JPD, concursos EPSO, doutoramento</span></button>
+          <button class="perfil" data-tipo="emprego" data-i18n="perfil.5"><strong>Quero trabalhar já</strong><span>Agentes contratuais e empregos temporários na UE</span></button>
         </div>
       </div>
     </section>
@@ -77,35 +80,35 @@
     <!-- OPORTUNIDADES -->
     <section id="oportunidades" class="bloco" aria-labelledby="t-oport">
       <div class="in">
-        <h2 id="t-oport">Oportunidades</h2>
-        <p class="intro">Filtra por tipo, nível e destino. Cada ficha leva-te à página oficial, onde deves confirmar sempre as condições.</p>
+        <h2 id="t-oport" data-i18n="oport.h">Oportunidades</h2>
+        <p class="intro" data-i18n="oport.p">Filtra por tipo, nível e destino. Cada ficha leva-te à página oficial, onde deves confirmar sempre as condições.</p>
 
         <div class="filtros" role="group" aria-label="Filtros">
           <div class="chips" id="chips-tipo"></div>
           <div class="selects">
-            <label>Nível
+            <label><span data-i18n="f.nivel">Nível</span>
               <select id="f-nivel">
-                <option value="">Todos</option>
-                <option value="secundario">Secundário / 18 anos</option>
-                <option value="licenciatura">A estudar (licenciatura)</option>
-                <option value="finalista">Finalista</option>
-                <option value="licenciado">Licenciado/a</option>
-                <option value="mestrado">Mestrado</option>
-                <option value="doutoramento">Doutoramento</option>
+                <option value="" data-i18n="f.todos">Todos</option>
+                <option value="secundario" data-i18n="n.secundario">Secundário / 18 anos</option>
+                <option value="licenciatura" data-i18n="n.licenciatura">A estudar (licenciatura)</option>
+                <option value="finalista" data-i18n="n.finalista">Finalista</option>
+                <option value="licenciado" data-i18n="n.licenciado">Licenciado/a</option>
+                <option value="mestrado" data-i18n="n.mestrado">Mestrado</option>
+                <option value="doutoramento" data-i18n="n.doutoramento">Doutoramento</option>
               </select>
             </label>
-            <label>Destino
+            <label><span data-i18n="f.destino">Destino</span>
               <select id="f-destino">
-                <option value="">Todos</option>
-                <option value="ue">União Europeia</option>
+                <option value="" data-i18n="f.todos">Todos</option>
+                <option value="ue" data-i18n="d.ue">União Europeia</option>
                 <option value="portugal">Portugal</option>
-                <option value="franca">França</option>
-                <option value="eua">Estados Unidos</option>
-                <option value="mundo">Mundo</option>
+                <option value="franca" data-i18n="d.franca">França</option>
+                <option value="eua" data-i18n="d.eua">Estados Unidos</option>
+                <option value="mundo" data-i18n="d.mundo">Mundo</option>
                 <option value="online">Online</option>
               </select>
             </label>
-            <label class="cb"><input type="checkbox" id="f-abertas"> Só abertas agora</label>
+            <label class="cb"><input type="checkbox" id="f-abertas"> <span data-i18n="f.abertas">Só abertas agora</span></label>
           </div>
         </div>
 
@@ -117,10 +120,10 @@
     <!-- PRAZOS -->
     <section id="prazos" class="bloco bloco-claro" aria-labelledby="t-prazos">
       <div class="in">
-        <h2 id="t-prazos">Prazos</h2>
-        <p class="intro">Todas as datas, mês a mês. As candidaturas que já fecharam saem sozinhas desta lista. As datas marcadas como <em>previstas</em> ainda não são oficiais.</p>
+        <h2 id="t-prazos" data-i18n="prazos.h">Prazos</h2>
+        <p class="intro" data-i18n="prazos.p">Todas as datas, mês a mês. As candidaturas que já fecharam saem sozinhas desta lista. As datas marcadas como <em>previstas</em> ainda não são oficiais.</p>
         <div id="calendario" class="calendario"></div>
-        <h3>Sempre abertos</h3>
+        <h3 data-i18n="prazos.sempre">Sempre abertos</h3>
         <ul id="sempre" class="lista-sempre"></ul>
       </div>
     </section>
@@ -128,29 +131,29 @@
     <!-- CARREIRAS NA UE -->
     <section id="carreiras" class="bloco" aria-labelledby="t-carr">
       <div class="in">
-        <h2 id="t-carr">Carreiras na UE</h2>
+        <h2 id="t-carr" data-i18n="nav.carr">Carreiras na UE</h2>
 
         <div class="duas">
           <div>
-            <h3>O que é a EPSO?</h3>
-            <p>O Serviço Europeu de Seleção do Pessoal (EPSO) organiza a seleção para as instituições da UE: concursos para lugares permanentes (funcionários AD e AST) e seleções de agentes contratuais. Não existe um perfil perfeito: há lugares para quem vem do Direito, das Línguas, da Comunicação, da Economia ou da Informática.</p>
-            <h3>Como te preparar</h3>
+            <h3 data-i18n="carr.epso.h">O que é a EPSO?</h3>
+            <p data-i18n="carr.epso.p">O Serviço Europeu de Seleção do Pessoal (EPSO) organiza a seleção para as instituições da UE: concursos para lugares permanentes (funcionários AD e AST) e seleções de agentes contratuais. Não existe um perfil perfeito: há lugares para quem vem do Direito, das Línguas, da Comunicação, da Economia ou da Informática.</p>
+            <h3 data-i18n="carr.prep.h">Como te preparar</h3>
             <ul class="links">
-              <li><a href="https://selection.eu-careers.europa.eu/en/what-know-about-testing" target="_blank" rel="noopener">Vídeos tutoriais da EPSO</a></li>
-              <li><a href="https://selection.eu-careers.europa.eu/en/selection-procedure/epso-tests" target="_blank" rel="noopener">Testes de exemplo</a></li>
-              <li><a href="https://selection.eu-careers.europa.eu/en/epso-ai-assistant" target="_blank" rel="noopener">Epsy, o assistente de IA da EPSO</a></li>
-              <li><a href="https://selection.eu-careers.europa.eu/en/epso-faqs-by-category" target="_blank" rel="noopener">Perguntas frequentes</a></li>
+              <li><a href="https://selection.eu-careers.europa.eu/en/what-know-about-testing" target="_blank" rel="noopener" data-i18n="carr.l1">Vídeos tutoriais da EPSO</a></li>
+              <li><a href="https://selection.eu-careers.europa.eu/en/selection-procedure/epso-tests" target="_blank" rel="noopener" data-i18n="carr.l2">Testes de exemplo</a></li>
+              <li><a href="https://selection.eu-careers.europa.eu/en/epso-ai-assistant" target="_blank" rel="noopener" data-i18n="carr.l3">Epsy, o assistente de IA da EPSO</a></li>
+              <li><a href="https://selection.eu-careers.europa.eu/en/epso-faqs-by-category" target="_blank" rel="noopener" data-i18n="carr.l4">Perguntas frequentes</a></li>
             </ul>
           </div>
           <div>
-            <h3>Concursos EPSO previstos</h3>
-            <p class="nota">Datas indicativas publicadas pela EPSO.</p>
+            <h3 data-i18n="carr.prev.h">Concursos EPSO previstos</h3>
+            <p class="nota" data-i18n="carr.prev.p">Datas indicativas publicadas pela EPSO.</p>
             <ul id="epso-previstos" class="lista-previstos"></ul>
-            <a class="btn btn-azul" href="https://selection.eu-careers.europa.eu/en/upcoming-selection-procedures" target="_blank" rel="noopener">Ver todos na EPSO</a>
+            <a class="btn btn-azul" href="https://selection.eu-careers.europa.eu/en/upcoming-selection-procedures" target="_blank" rel="noopener" data-i18n="carr.prev.b">Ver todos na EPSO</a>
           </div>
         </div>
 
-        <h3>Mito ou realidade?</h3>
+        <h3 data-i18n="quiz.h">Mito ou realidade?</h3>
         <div id="quiz" class="quiz"></div>
       </div>
     </section>
@@ -159,18 +162,18 @@
     <section id="sobre" class="bloco bloco-azul" aria-labelledby="t-sobre">
       <div class="in duas">
         <div>
-          <img class="sobre-foto" src="09_embaixadora_daniela.jpg" alt="Daniela Barreto, sorridente, sentada a uma mesa">
-          <h2 id="t-sobre">Sobre mim</h2>
-          <p class="sobre-papel">Daniela Barreto · Embaixadora Estudantil EU Careers · Universidade da Madeira · outubro de 2026 a outubro de 2027<br>Programa oficial do Serviço Europeu de Seleção do Pessoal (EPSO)</p>
-          <p>Sou estudante finalista da licenciatura em Línguas e Relações Empresariais na Universidade da Madeira e Embaixadora oficial EU Careers na minha universidade. O meu papel é aproximar os estudantes das oportunidades de trabalho nas instituições europeias: concursos, estágios como o Blue Book ou os estágios Schuman, e contratos temporários.</p>
-          <p>Sou estagiária de comunicação institucional no Centro Regional de Informação das Nações Unidas (UNRIC) e escrevo a The EU Briefing, uma newsletter sobre política digital e carreiras na UE. Falo espanhol, inglês, português e alemão.</p>
-          <p>Este site reúne informação oficial sobre bolsas, estágios e carreiras para que ninguém fique de fora por não saber por onde começar. Se tiveres dúvidas, escreve-me.</p>
-          <div class="botoes"><a class="btn btn-ouro" href="https://www.linkedin.com/in/danielavbarreto/" target="_blank" rel="noopener">Contacta-me no LinkedIn</a></div>
+          <img class="sobre-foto" src="09_embaixadora_daniela.jpg" alt="Daniela Barreto, sorridente, sentada a uma mesa" data-i18n-alt="sobre.alt">
+          <h2 id="t-sobre" data-i18n="nav.sobre">Sobre mim</h2>
+          <p class="sobre-papel" data-i18n="sobre.papel">Daniela Barreto · Embaixadora Estudantil EU Careers · Universidade da Madeira · outubro de 2026 a outubro de 2027<br>Programa oficial do Serviço Europeu de Seleção do Pessoal (EPSO)</p>
+          <p data-i18n="sobre.p1">Sou estudante finalista da licenciatura em Línguas e Relações Empresariais na Universidade da Madeira e Embaixadora oficial EU Careers na minha universidade. O meu papel é aproximar os estudantes das oportunidades de trabalho nas instituições europeias: concursos, estágios como o Blue Book ou os estágios Schuman, e contratos temporários.</p>
+          <p data-i18n="sobre.p2">Sou estagiária de comunicação institucional no Centro Regional de Informação das Nações Unidas (UNRIC) e escrevo a The EU Briefing, uma newsletter sobre política digital e carreiras na UE. Falo espanhol, inglês, português e alemão.</p>
+          <p data-i18n="sobre.p3">Acredito que as oportunidades existem, mas nem sempre chegam a quem mais precisa delas. Por isso criei este site: para que a informação certa chegue a todos, com ligação às fontes oficiais, e para que ninguém fique de fora por não saber por onde começar. Este site é um projeto pessoal e independente. Se tiveres dúvidas, escreve-me.</p>
+          <div class="botoes"><a class="btn btn-ouro" href="https://www.linkedin.com/in/danielavbarreto/" target="_blank" rel="noopener" data-i18n="sobre.li">Contacta-me no LinkedIn</a></div>
         </div>
         <div>
-          <h3>Queres ser Embaixador/a EU Careers?</h3>
-          <p>A seleção para 2027/28 está prevista para fevereiro-março de 2027. O mandato vai de outubro de 2027 a setembro de 2028, com uma formação obrigatória de um dia em outubro.</p>
-          <p><a class="link-claro" href="https://selection.eu-careers.europa.eu/job-opportunities/eu-careers-student-ambassadors/participating-unversities" target="_blank" rel="noopener">Universidades participantes</a> · <a class="link-claro" href="mailto:EPSO-CAREERS-AMBASSADOR@ec.europa.eu">Contacto da EPSO</a></p>
+          <h3 data-i18n="emb.h">Queres ser Embaixador/a EU Careers?</h3>
+          <p data-i18n="emb.p">A seleção para 2027/28 está prevista para fevereiro-março de 2027. O mandato vai de outubro de 2027 a setembro de 2028, com uma formação obrigatória de um dia em outubro.</p>
+          <p><a class="link-claro" href="https://selection.eu-careers.europa.eu/job-opportunities/eu-careers-student-ambassadors/participating-unversities" target="_blank" rel="noopener" data-i18n="emb.l1">Universidades participantes</a> · <a class="link-claro" href="mailto:EPSO-CAREERS-AMBASSADOR@ec.europa.eu" data-i18n="emb.l2">Contacto da EPSO</a></p>
         </div>
       </div>
     </section>
@@ -178,13 +181,13 @@
 
   <footer class="rodape">
     <div class="in">
-      <p><strong>Daniela V. Barreto</strong> · Guia independente de bolsas, estágios e oportunidades internacionais.</p>
-      <p>Página independente: não é um site oficial da EPSO, da União Europeia nem da Universidade da Madeira. Confirma sempre as datas e condições nas páginas oficiais.</p>
-      <p>Última atualização: <span id="atualizado"></span> · <a href="https://eu-careers.europa.eu/" target="_blank" rel="noopener">EU Careers</a></p>
+      <p data-i18n="rod.1"><strong>Daniela V. Barreto</strong> · Guia independente de bolsas, estágios e oportunidades internacionais.</p>
+      <p data-i18n="rod.2">Página independente: não é um site oficial da EPSO, da União Europeia nem da Universidade da Madeira. Confirma sempre as datas e condições nas páginas oficiais.</p>
+      <p><span data-i18n="rod.atual">Última atualização:</span> <span id="atualizado"></span> · <a href="https://eu-careers.europa.eu/" target="_blank" rel="noopener">EU Careers</a></p>
     </div>
   </footer>
 
-  <script src="dados.js?v=20261123"></script>
-  <script src="app.js?v=20261123"></script>
+  <script src="dados.js?v=20261123b"></script>
+  <script src="app.js?v=20261123b"></script>
 </body>
 </html>
