@@ -117,6 +117,30 @@ const OPORTUNIDADES = [
     revisto: "2026-10-31"
   },
   {
+    id: "eurocities-estagio",
+    titulo: "Estágio em políticas e advocacy na Eurocities",
+    entidade: "Eurocities (Bruxelas)",
+    tipo: "estagio", nivel: ["licenciatura", "finalista", "mestrado"], destino: "ue",
+    paraQuem: "Estudantes de licenciatura ou mestrado inscritos durante todo o estágio, em ciência política, assuntos europeus, direito, economia, estudos urbanos ou área próxima. Inglês muito bom. Início em fevereiro de 2027.",
+    apoio: "É obrigatório ter uma bolsa (por exemplo, Erasmus+) e um acordo com a tua universidade. A Eurocities reembolsa os transportes públicos na Bélgica.",
+    duracao: "6 meses",
+    fecha: "2026-11-26T17:00+01:00",
+    link: "https://eurocities.eu/policy-and-advocacy-intern/",
+    revisto: "2026-11-24"
+  },
+  {
+    id: "esa-relacoes-externas",
+    titulo: "Estágio no Departamento de Relações Externas da Agência Espacial Europeia (ESA)",
+    entidade: "ESA (Paris)",
+    tipo: "estagio", nivel: ["mestrado"], destino: "ue",
+    paraQuem: "Estudantes de mestrado, de preferência no último ou penúltimo ano, inscritos durante todo o estágio. Inglês ou francês. Aberto a nacionais de Portugal e de outros Estados membros da ESA.",
+    apoio: "Consulta as condições na página de estágios da ESA.",
+    duracao: "3 a 6 meses, com início a partir de fevereiro de 2027",
+    fecha: "2026-11-30T23:59+01:00",
+    link: "https://jobs.esa.int/job/Paris-Intern-in-the-External-Relations-Department/1452875233/",
+    revisto: "2026-11-24"
+  },
+  {
     id: "euaa-estagio",
     titulo: "Estágio na Agência da UE para o Asilo (EUAA)",
     entidade: "EUAA (Malta)",
@@ -394,6 +418,8 @@ const EN_DADOS = {
   "cast": { titulo: "Contract staff (CAST Permanent)", entidade: "EPSO · EU institutions and agencies", paraQuem: "Profiles in administration, communication, finance, law, IT and translation. Function group IV requires at least three years of completed university studies.", apoio: "Paid contract at an EU institution or agency (including in Lisbon).", duracao: "Renewable fixed term contracts" },
   "temporarios-ue": { titulo: "Temporary and contract staff jobs", entidade: "EU institutions and agencies", paraQuem: "Varies by vacancy. There are posts at agencies based in Lisbon (EMSA, EUDA).", apoio: "Paid contract.", duracao: "Varies" },
   "tce-estagios": { titulo: "Artificial intelligence traineeships at the European Court of Auditors", entidade: "European Court of Auditors (Luxembourg)", paraQuem: "Nationality of an EU country and a degree of at least three years in artificial intelligence, computer science, data science or a closely related field. English at C1.", apoio: "€2,500 a month", duracao: "6 months (sessions starting 1 April and 1 October)", recorrente: "Two sessions a year: check the next one on the official website" },
+  "eurocities-estagio": { titulo: "Policy and advocacy traineeship at Eurocities", entidade: "Eurocities (Brussels)", paraQuem: "Bachelor's or master's students enrolled for the whole traineeship, in political science, EU affairs, law, economics, urban studies or a related field. Excellent English. Starts in February 2027.", apoio: "You must have a grant (for example, Erasmus+) and an agreement with your university. Eurocities reimburses public transport in Belgium.", duracao: "6 months" },
+  "esa-relacoes-externas": { titulo: "Traineeship in the External Relations Department of the European Space Agency (ESA)", entidade: "ESA (Paris)", paraQuem: "Master's students, preferably in their final or penultimate year, enrolled for the whole traineeship. English or French. Open to nationals of Portugal and other ESA Member States.", apoio: "See the conditions on the ESA internships page.", duracao: "3 to 6 months, starting from February 2027" },
   "euaa-estagio": { titulo: "Traineeship at the EU Agency for Asylum (EUAA)", paraQuem: "First cycle of higher education completed, or at least three years of studies completed before the traineeship starts. Starts in March or April 2027.", apoio: "€1,500 a month", duracao: "Up to 6 months" },
   "conselho-estagios": { titulo: "Traineeships at the Council of the EU", entidade: "General Secretariat of the Council (Brussels)", paraQuem: "EU citizenship, a bachelor's degree, very good English or French and another EU language, and no previous work experience at another EU institution.", apoio: "Paid traineeship with allowances.", duracao: "5 months (September 2027 to January 2028)", quando: "Applications from 8 February 2027, in February and March" },
   "blue-book": { titulo: "Blue Book traineeship (European Commission)", entidade: "European Commission and other EU bodies", paraQuem: "A completed bachelor's degree of at least 3 years, with the diploma in hand when you apply. English, French or German at C1 and another EU language at B2. No more than 6 weeks of previous experience at the EU institutions.", apoio: "Around €1,538 a month (2026 figure)", duracao: "5 months (1 October 2027 to 29 February 2028)", recorrente: "Two application rounds a year: February to March and July to September" },
@@ -416,4 +442,4 @@ const EN_DADOS = {
   "epso-preparacao": { titulo: "Preparing for EPSO tests", paraQuem: "Anyone preparing for a competition or a contract staff selection.", apoio: "Sample tests, tutorial videos and the Epsy AI assistant, all free of charge.", duracao: "At your own pace" }
 };
 
-const ULTIMA_ATUALIZACAO = "2026-11-23";
+const ULTIMA_ATUALIZACAO = "2026-11-24";
