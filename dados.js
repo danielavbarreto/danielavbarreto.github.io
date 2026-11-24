@@ -376,12 +376,12 @@ const OPORTUNIDADES = [
     titulo: "EU Academy: cursos gratuitos da UE",
     entidade: "Comissão Europeia",
     tipo: "curso", nivel: ["todos"], destino: "online",
-    paraQuem: "Qualquer pessoa. Cursos sobre políticas da UE, línguas, digital e mais.",
+    paraQuem: "Qualquer pessoa. Cursos sobre políticas da UE, línguas, digital e mais. A Comissão Europeia desativou temporariamente o acesso público à plataforma devido a um incidente de cibersegurança.",
     apoio: "Gratuito, com certificados em muitos cursos.",
     duracao: "Ao teu ritmo",
-    sempreAberto: true,
+    sempreAberto: true, indisponivel: true,
     link: "https://academy.europa.eu/",
-    revisto: "2026-11-22"
+    revisto: "2026-11-24"
   },
   {
     id: "epso-preparacao",
@@ -438,7 +438,7 @@ const EN_DADOS = {
   "unv": { titulo: "United Nations Volunteers (UNV)", entidade: "UN Volunteers programme", paraQuem: "There are onsite and online assignments, including assignments for young people (UN Youth Volunteers).", apoio: "Living allowance for onsite assignments.", duracao: "Varies" },
   "eye-2027": { titulo: "European Youth Event 2027 (Strasbourg)", entidade: "European Parliament", paraQuem: "Young people from all over Europe. The event takes place on 18 and 19 June 2027 in Strasbourg.", apoio: "Free to attend. Travel and accommodation are at your own expense (the call for financial support for groups closed on 13 November 2026).", duracao: "2 days", quando: "Registration will be announced on the official website" },
   "embaixadores-eu-careers": { titulo: "EU Careers Ambassador 2027/28", paraQuem: "Students at participating universities. Compulsory training in October 2027; the term runs from October 2027 to September 2028.", apoio: "Training from EPSO and experience in institutional communication.", duracao: "1 academic year", quando: "Selection expected in February and March 2027" },
-  "eu-academy": { titulo: "EU Academy: free EU courses", entidade: "European Commission", paraQuem: "Anyone. Courses on EU policies, languages, digital skills and more.", apoio: "Free, with certificates for many courses.", duracao: "At your own pace" },
+  "eu-academy": { titulo: "EU Academy: free EU courses", entidade: "European Commission", paraQuem: "Anyone. Courses on EU policies, languages, digital skills and more. The European Commission has temporarily disabled public access to the platform following a cybersecurity incident.", apoio: "Free, with certificates for many courses.", duracao: "At your own pace" },
   "epso-preparacao": { titulo: "Preparing for EPSO tests", paraQuem: "Anyone preparing for a competition or a contract staff selection.", apoio: "Sample tests, tutorial videos and the Epsy AI assistant, all free of charge.", duracao: "At your own pace" }
 };
 

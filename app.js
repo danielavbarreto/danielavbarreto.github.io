@@ -19,7 +19,7 @@
     pt: {
       tipos: { bolsa: "Bolsas de estudo", estagio: "Estágios", mobilidade: "Mobilidade", voluntariado: "Voluntariado", emprego: "Emprego na UE", evento: "Eventos e programas", curso: "Cursos gratuitos" },
       tipoSing: { bolsa: "Bolsa", estagio: "Estágio", mobilidade: "Mobilidade", voluntariado: "Voluntariado", emprego: "Emprego na UE", evento: "Evento / programa", curso: "Curso gratuito" },
-      todas: "Todas", sempre: "Sempre aberto", encerrado: "Encerrado", previsto: "Previsto: ", abreA: "Abre a ",
+      todas: "Todas", indisp: "Temporariamente indisponível", sempre: "Sempre aberto", encerrado: "Encerrado", previsto: "Previsto: ", abreA: "Abre a ",
       fechaHoje: "Fecha hoje ou amanhã", fechaEm: (d) => `Fecha em ${d} dias`, abertoAte: "Aberto até ", verDatas: "Ver datas",
       nadaBreve: "Nada a fechar nos próximos 30 dias. Espreita os prazos mais abaixo.", hojeAmanha: "Hoje/amanhã", dias: (d) => d + " dias", ate: "Até ",
       contagem: (n) => n === 1 ? "1 oportunidade" : `${n} oportunidades`,
@@ -32,7 +32,7 @@
     en: {
       tipos: { bolsa: "Scholarships", estagio: "Traineeships", mobilidade: "Mobility", voluntariado: "Volunteering", emprego: "EU jobs", evento: "Events and programmes", curso: "Free courses" },
       tipoSing: { bolsa: "Scholarship", estagio: "Traineeship", mobilidade: "Mobility", voluntariado: "Volunteering", emprego: "EU job", evento: "Event / programme", curso: "Free course" },
-      todas: "All", sempre: "Always open", encerrado: "Closed", previsto: "Expected: ", abreA: "Opens on ",
+      todas: "All", indisp: "Temporarily unavailable", sempre: "Always open", encerrado: "Closed", previsto: "Expected: ", abreA: "Opens on ",
       fechaHoje: "Closes today or tomorrow", fechaEm: (d) => `Closes in ${d} days`, abertoAte: "Open until ", verDatas: "See dates",
       nadaBreve: "Nothing closes in the next 30 days. Have a look at the deadlines further down.", hojeAmanha: "Today/tomorrow", dias: (d) => d + " days", ate: "Until ",
       contagem: (n) => n === 1 ? "1 opportunity" : `${n} opportunities`,
@@ -119,6 +119,7 @@
 
   function estado(o) {
     const abre = data(o.abre), fecha = data(o.fecha, true), L = t();
+    if (o.indisponivel) return { cls: "fechado", txt: L.indisp };
     if (o.sempreAberto) return { cls: "aberto", txt: L.sempre, aberto: true };
     if (fecha && fecha < AGORA) return { cls: "fechado", txt: L.encerrado, fechado: true };
     if (abre && abre > AGORA) {
@@ -245,7 +246,7 @@
         <span>${e.mes ? L.calPrev : e.txt}: <a href="${esc(e.o.link)}" ${ext}>${esc(c(e.o, "titulo"))}</a>${e.o.indicativo ? `<span class="previsto">${L.badge}</span>` : ""}</span></li>`).join("")}
       </ul></div>`).join("");
 
-    document.getElementById("sempre").innerHTML = OPORTUNIDADES.filter((o) => o.sempreAberto)
+    document.getElementById("sempre").innerHTML = OPORTUNIDADES.filter((o) => o.sempreAberto && !o.indisponivel)
       .map((o) => `<li><a href="${esc(o.link)}" ${ext}>${esc(c(o, "titulo"))}</a></li>`).join("");
   }
 
