@@ -23,7 +23,7 @@
       fechaHoje: "Fecha hoje ou amanhã", fechaEm: (d) => `Fecha em ${d} dias`, abertoAte: "Aberto até ", verDatas: "Ver datas",
       nadaBreve: "Nada a fechar nos próximos 30 dias. Espreita os prazos mais abaixo.", hojeAmanha: "Hoje/amanhã", dias: (d) => d + " dias", ate: "Até ",
       contagem: (n) => n === 1 ? "1 oportunidade" : `${n} oportunidades`,
-      artigo: "Lê o meu artigo sobre este tema ↗", paraQuem: "Para quem", apoio: "O que recebes", duracao: "Duração", quando: "Quando", oficial: "Página oficial ↗",
+      artigo: "Lê o meu artigo sobre este tema ↗", avisoFonte: "Aviso oficial da Comissão Europeia ↗", paraQuem: "Para quem", apoio: "O que recebes", duracao: "Duração", quando: "Quando", oficial: "Página oficial ↗",
       semRes: "Não há oportunidades com esta combinação de filtros.", verTodas: "Ver todas as oportunidades",
       calPrev: "Previsto", calAbre: "Abre", calUltimo: "Último dia", calMes: "Durante o mês", badge: "previsto",
       realidade: "Realidade", mito: "Mito", certo: "Certo! ", errado: "Não exatamente. ",
@@ -36,7 +36,7 @@
       fechaHoje: "Closes today or tomorrow", fechaEm: (d) => `Closes in ${d} days`, abertoAte: "Open until ", verDatas: "See dates",
       nadaBreve: "Nothing closes in the next 30 days. Have a look at the deadlines further down.", hojeAmanha: "Today/tomorrow", dias: (d) => d + " days", ate: "Until ",
       contagem: (n) => n === 1 ? "1 opportunity" : `${n} opportunities`,
-      artigo: "Read my article on this topic ↗", paraQuem: "Who it is for", apoio: "What you get", duracao: "Duration", quando: "When", oficial: "Official page ↗",
+      artigo: "Read my article on this topic ↗", avisoFonte: "Official European Commission notice ↗", paraQuem: "Who it is for", apoio: "What you get", duracao: "Duration", quando: "When", oficial: "Official page ↗",
       semRes: "There are no opportunities matching these filters.", verTodas: "See all opportunities",
       calPrev: "Expected", calAbre: "Opens", calUltimo: "Last day", calMes: "During the month", badge: "expected",
       realidade: "Reality", mito: "Myth", certo: "Correct! ", errado: "Not quite. ",
@@ -206,6 +206,7 @@
           <dt>${L.duracao}</dt><dd>${esc(c(o, "duracao"))}</dd>
           ${quando ? `<dt>${L.quando}</dt><dd>${esc(quando)}</dd>` : ""}
         </dl>
+        ${o.aviso ? `<p class="aviso">${esc(c(o, "aviso"))} <a href="${esc(o.avisoLink)}" ${ext}>${L.avisoFonte}</a></p>` : ""}
         ${o.artigo ? `<p class="artigo"><a href="${esc(o.artigo)}" ${ext}>${L.artigo}</a></p>` : ""}
         <div class="rodape-ficha">
           <span class="estado ${e.cls}">${e.txt}</span>

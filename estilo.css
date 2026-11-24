@@ -65,6 +65,8 @@ a { color: var(--azul-2); }
 .artigos { padding-left: 1.1rem; margin: .4rem 0 .6rem; }
 .artigos li { margin-bottom: .45rem; }
 .ficha .artigo { font-size: .9rem; margin: 0 0 .7rem; }
+.ficha .aviso { font-size: .88rem; margin: 0 0 .8rem; padding: .6rem .75rem; background: #fdf3e1; border-left: 3px solid var(--ouro); border-radius: 4px; }
+.ficha .aviso a { font-weight: 700; }
 .sobre-papel { color: var(--ouro-claro); font-size: .95rem; }
 .intro { color: var(--suave); max-width: 720px; margin-top: 0; }
 .nota { color: var(--suave); font-size: .9rem; margin-top: 0; }
