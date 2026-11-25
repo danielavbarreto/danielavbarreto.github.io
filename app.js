@@ -100,8 +100,8 @@
   };
   const META = {
     pt: { title: document.title, desc: (document.querySelector('meta[name="description"]') || {}).content },
-    en: { title: "Daniela V. Barreto: scholarships, traineeships and international opportunities",
-          desc: "An independent guide to scholarships, traineeships, volunteering, mobility and international careers for students in Portugal, by Daniela V. Barreto." }
+    en: { title: "Daniela Barreto: scholarships, traineeships and international opportunities",
+          desc: "An independent guide to scholarships, traineeships, volunteering, mobility and international careers for students in Portugal, by Daniela Barreto." }
   };
 
   const t = () => T[LANG];
