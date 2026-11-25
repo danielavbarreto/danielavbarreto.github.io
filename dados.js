@@ -111,7 +111,7 @@ const OPORTUNIDADES = [
     paraQuem: "Nacionalidade de um país da UE e diploma de pelo menos três anos em inteligência artificial, informática, ciência de dados ou área próxima. Inglês C1.",
     apoio: "2500 € por mês",
     duracao: "6 meses (sessões de 1 de abril e 1 de outubro)",
-    fecha: "2026-11-30T23:59",
+    fecha: "2026-11-30T23:59+01:00",
     recorrente: "Duas sessões por ano: confirma a próxima no site oficial",
     link: "https://www.eca.europa.eu/en/traineeships",
     revisto: "2026-10-31"
@@ -205,7 +205,7 @@ const OPORTUNIDADES = [
   },
   {
     id: "agencias-estagios", emPortugal: true,
-    titulo: "Estágios em agências da UE (BCE, EBA, ECDC e outras)",
+    titulo: "Estágios em agências e organismos da UE (EBA, ECDC, BCE e outros)",
     entidade: "Agências e organismos da UE",
     tipo: "estagio", nivel: ["finalista", "licenciado", "mestrado"], destino: "ue",
     paraQuem: "Varia por agência.",
@@ -362,7 +362,7 @@ const OPORTUNIDADES = [
     titulo: "Embaixador/a EU Careers 2027/28",
     entidade: "EPSO",
     tipo: "evento", nivel: ["licenciatura", "finalista", "mestrado"], destino: "portugal",
-    paraQuem: "Estudantes de universidades participantes. Formação obrigatória em outubro de 2027; mandato de outubro de 2027 a setembro de 2028.",
+    paraQuem: "Estudantes de universidades participantes. Formação obrigatória em outubro de 2027; mandato de 1 de outubro de 2027 a 1 de outubro de 2028.",
     apoio: "Formação da EPSO e experiência de comunicação institucional.",
     duracao: "1 ano letivo",
     indicativo: true, quando: "Seleção prevista para fevereiro e março de 2027",
@@ -427,7 +427,7 @@ const EN_DADOS = {
   "blue-book": { titulo: "Blue Book traineeship (European Commission)", entidade: "European Commission and other EU bodies", paraQuem: "A completed bachelor's degree of at least 3 years, with the diploma in hand when you apply. English, French or German at C1 and another EU language at B2. No more than 6 weeks of previous experience at the EU institutions.", apoio: "Around €1,538 a month (2026 figure)", duracao: "5 months (1 October 2027 to 29 February 2028)", recorrente: "Two application rounds a year: February to March and July to September" },
   "schuman": { titulo: "Schuman traineeships at the European Parliament", entidade: "European Parliament", paraQuem: "Aged 18 or over, nationality of an EU country, a full university degree and the language requirements. You must not have worked or done a traineeship for more than two months at an EU institution.", apoio: "Monthly allowance (varies with the place of assignment).", duracao: "5 months", recorrente: "Two application rounds a year: in May (traineeship from October to February) and in October (traineeship from March to July)" },
   "jpd": { entidade: "European External Action Service", paraQuem: "EU nationals with a master's degree and excellent English and/or French. Applications go through the national authority.", apoio: "€2,500 a month, plus €1,700 a month for accommodation and contributions towards travel and insurance", duracao: "12 months, renewable for another 12", quando: "A call every two years. The last one, for the 2026 to 2028 round, was open in April 2025." },
-  "agencias-estagios": { titulo: "Traineeships at EU agencies (ECB, EBA, ECDC and others)", entidade: "EU agencies and bodies", paraQuem: "Varies by agency.", apoio: "Usually paid.", duracao: "Varies: EMA 10 months, EUDA up to 11, EASA 12, Translation Centre 3 to 12 months" },
+  "agencias-estagios": { titulo: "Traineeships at EU agencies and bodies (EBA, ECDC, ECB and others)", entidade: "EU agencies and bodies", paraQuem: "Varies by agency.", apoio: "Usually paid.", duracao: "Varies: EMA 10 months, EUDA up to 11, EASA 12, Translation Centre 3 to 12 months" },
   "inov-contacto": { titulo: "INOV Contacto: paid international traineeships", paraQuem: "A completed bachelor's or integrated master's degree, legal residence in Portugal and aged up to 29. You can only take part once.", apoio: "Monthly grant (2.76 × IAS) during the phase in Portugal; travel, accommodation and insurance during the phase abroad.", duracao: "Varies by edition", quando: "Applications for the 29th edition opened in September 2026. The next edition is announced on the official website." },
   "onu-estagios": { titulo: "United Nations internships", entidade: "UN Secretariat and agencies", paraQuem: "Students or recent graduates. Vacancies are published throughout the year.", apoio: "Varies by agency.", duracao: "2 to 6 months" },
   "eiffel": { titulo: "France Excellence Eiffel scholarships", entidade: "French Ministry for Europe and Foreign Affairs · Campus France", paraQuem: "International students aged up to 29 (master's) or 35 (PhD). Only the French university can submit the application. Check the rules to see whether EU citizens are eligible.", apoio: "Monthly allowance and other costs (see the rules).", duracao: "12 to 24 months (master's)", quando: "The university sends the application to Campus France by 6 January 2027. Each university has an earlier internal deadline, so contact yours now." },
@@ -439,9 +439,9 @@ const EN_DADOS = {
   "corpo-solidariedade": { titulo: "European Solidarity Corps", entidade: "European Commission", paraQuem: "Young people aged 18 to 30.", apoio: "Travel, accommodation, food, insurance and pocket money.", duracao: "2 weeks to 12 months" },
   "unv": { titulo: "United Nations Volunteers (UNV)", entidade: "UN Volunteers programme", paraQuem: "There are onsite and online assignments, including assignments for young people (UN Youth Volunteers).", apoio: "Living allowance for onsite assignments.", duracao: "Varies" },
   "eye-2027": { titulo: "European Youth Event 2027 (Strasbourg)", entidade: "European Parliament", paraQuem: "Young people from all over Europe. The event takes place on 18 and 19 June 2027 in Strasbourg.", apoio: "Free to attend. Travel and accommodation are at your own expense (the call for financial support for groups closed on 13 November 2026).", duracao: "2 days", quando: "Registration will be announced on the official website" },
-  "embaixadores-eu-careers": { titulo: "EU Careers Ambassador 2027/28", paraQuem: "Students at participating universities. Compulsory training in October 2027; the term runs from October 2027 to September 2028.", apoio: "Training from EPSO and experience in institutional communication.", duracao: "1 academic year", quando: "Selection expected in February and March 2027" },
+  "embaixadores-eu-careers": { titulo: "EU Careers Ambassador 2027/28", paraQuem: "Students at participating universities. Compulsory training in October 2027; the term runs from 1 October 2027 to 1 October 2028.", apoio: "Training from EPSO and experience in institutional communication.", duracao: "1 academic year", quando: "Selection expected in February and March 2027" },
   "eu-academy": { titulo: "EU Academy: free EU courses", entidade: "European Commission", paraQuem: "Anyone. Courses on EU policies, languages, digital skills and more.", aviso: "Updated 24/11/2026: the European Commission has disabled public access to the platform following a cybersecurity incident involving users' personal data. If you have an account, watch out for suspicious emails or messages and do not share personal information with new contacts. Reopening is planned for 14 January 2027, on a new platform where you will need to create a new account.", apoio: "Free, with certificates for many courses.", duracao: "At your own pace" },
   "epso-preparacao": { titulo: "Preparing for EPSO tests", paraQuem: "Anyone preparing for a competition or a contract staff selection.", apoio: "Sample tests, tutorial videos and the Epsy AI assistant, all free of charge.", duracao: "At your own pace" }
 };
 
-const ULTIMA_ATUALIZACAO = "2026-11-24";
+const ULTIMA_ATUALIZACAO = "2026-11-25";
