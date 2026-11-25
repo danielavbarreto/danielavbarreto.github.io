@@ -88,7 +88,14 @@
     "emb.p": "Selection for 2027/28 is expected in February and March 2027. The term runs from October 2027 to September 2028, with a compulsory one day training session in October.",
     "emb.l1": "Participating universities", "emb.l2": "Contact EPSO",
     "rod.1": "<strong>Daniela V. Barreto</strong> · An independent guide to scholarships, traineeships and international opportunities.",
-    "rod.2": "Independent page: this is not an official website of EPSO, the European Union or Universidade da Madeira. Always check dates and conditions on the official pages.",
+    "rod.2": "An independent page, created in a personal capacity: this is not an official website of EPSO, the European Union, the United Nations (including UNRIC) or Universidade da Madeira. Always check dates and conditions on the official pages.",
+    "rod.fonte": "Source:",
+    "rod.priv": "Privacy",
+    "priv.t": "Privacy",
+    "priv.p1": "<strong>Data controller:</strong> Daniela V. Barreto, in a personal capacity. Contact: <a href=\"https://www.linkedin.com/in/danielavbarreto/\" target=\"_blank\" rel=\"noopener\">LinkedIn</a>.",
+    "priv.p2": "This site has no forms, uses no cookies and does not ask for your personal data. To see how many people visit it, I use <a href=\"https://www.goatcounter.com/privacy\" target=\"_blank\" rel=\"noopener\">GoatCounter</a>, which keeps only aggregate totals: pages viewed, country, browser, operating system, screen size and referring page. GoatCounter does not store your IP address: it keeps it in memory for up to 8 hours only, so the same visit is not counted twice. The data is stored on servers in Finland and Germany.",
+    "priv.p3": "The site is hosted on GitHub Pages (GitHub, Inc.), which logs visitors' IP addresses for security purposes and may process this data in the United States, under the <a href=\"https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement\" target=\"_blank\" rel=\"noopener\">GitHub privacy statement</a>. The fonts are hosted on this site. Your language choice (PT or EN) is stored only in your browser.",
+    "priv.p4": "<strong>Legal basis:</strong> legitimate interest in keeping the site secure and knowing whether it is useful (Article 6(1)(f) GDPR). You have the right to request access to, rectification or erasure of your data and to object to its processing. You can lodge a complaint with the Portuguese data protection authority, the <a href=\"https://www.cnpd.pt/\" target=\"_blank\" rel=\"noopener\">Comissão Nacional de Proteção de Dados (CNPD)</a>. Updated 25/11/2026.",
     "rod.atual": "Last updated:"
   };
   const META = {

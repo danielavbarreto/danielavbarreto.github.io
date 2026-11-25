@@ -1,3 +1,8 @@
+@font-face { font-family: "Libre Baskerville"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonte-baskerville-400.woff2") format("woff2"); }
+@font-face { font-family: "Libre Baskerville"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonte-baskerville-700.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonte-sourcesans-400.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonte-sourcesans-600.woff2") format("woff2"); }
+@font-face { font-family: "Source Sans 3"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonte-sourcesans-700.woff2") format("woff2"); }
 :root {
   --azul: #0b1f44;
   --azul-2: #13306a;
@@ -138,6 +143,9 @@ a { color: var(--azul-2); }
 .rodape { background: #071631; color: #c9cfdc; padding: 2rem 0; font-size: .92rem; }
 .rodape a { color: var(--ouro); }
 .rodape p { margin: .3rem 0; }
+.privacidade { background: var(--fundo-claro); padding: 2rem 0; font-size: .9rem; color: var(--suave); }
+.privacidade h2 { font-size: 1.1rem; margin: 0 0 .6rem; }
+.privacidade p { margin: 0 0 .55rem; max-width: 70ch; }
 
 @media (max-width: 760px) {
   .menu-btn { display: block; }
