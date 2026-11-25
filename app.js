@@ -20,8 +20,8 @@
       tipos: { bolsa: "Bolsas de estudo", estagio: "Estágios", mobilidade: "Mobilidade", voluntariado: "Voluntariado", emprego: "Emprego na UE", evento: "Eventos e programas", curso: "Cursos gratuitos" },
       tipoSing: { bolsa: "Bolsa", estagio: "Estágio", mobilidade: "Mobilidade", voluntariado: "Voluntariado", emprego: "Emprego na UE", evento: "Evento / programa", curso: "Curso gratuito" },
       todas: "Todas", indisp: "Temporariamente indisponível", sempre: "Sempre aberto", encerrado: "Encerrado", previsto: "Previsto: ", abreA: "Abre a ",
-      fechaHoje: "Fecha hoje ou amanhã", fechaEm: (d) => `Fecha em ${d} dias`, abertoAte: "Aberto até ", verDatas: "Ver datas",
-      nadaBreve: "Nada a fechar nos próximos 30 dias. Espreita os prazos mais abaixo.", hojeAmanha: "Hoje/amanhã", dias: (d) => d + " dias", ate: "Até ",
+      fechaHoje: "Fecha hoje", fechaAmanha: "Fecha amanhã", hoje: "Hoje", amanha: "Amanhã", horaPt: " (hora de Portugal)", fechaEm: (d) => `Fecha em ${d} dias`, abertoAte: "Aberto até ", verDatas: "Ver datas",
+      nadaBreve: "Nada a fechar nos próximos 30 dias. Espreita os prazos mais abaixo.", hojeAmanha: "Hoje", dias: (d) => d + " dias", ate: "Até ",
       contagem: (n) => n === 1 ? "1 oportunidade" : `${n} oportunidades`,
       artigo: "Lê o meu artigo sobre este tema ↗", avisoFonte: "Aviso oficial da Comissão Europeia ↗", paraQuem: "Para quem", apoio: "O que recebes", duracao: "Duração", quando: "Quando", oficial: "Página oficial ↗",
       semRes: "Não há oportunidades com esta combinação de filtros.", verTodas: "Ver todas as oportunidades",
@@ -33,8 +33,8 @@
       tipos: { bolsa: "Scholarships", estagio: "Traineeships", mobilidade: "Mobility", voluntariado: "Volunteering", emprego: "EU jobs", evento: "Events and programmes", curso: "Free courses" },
       tipoSing: { bolsa: "Scholarship", estagio: "Traineeship", mobilidade: "Mobility", voluntariado: "Volunteering", emprego: "EU job", evento: "Event / programme", curso: "Free course" },
       todas: "All", indisp: "Temporarily unavailable", sempre: "Always open", encerrado: "Closed", previsto: "Expected: ", abreA: "Opens on ",
-      fechaHoje: "Closes today or tomorrow", fechaEm: (d) => `Closes in ${d} days`, abertoAte: "Open until ", verDatas: "See dates",
-      nadaBreve: "Nothing closes in the next 30 days. Have a look at the deadlines further down.", hojeAmanha: "Today/tomorrow", dias: (d) => d + " days", ate: "Until ",
+      fechaHoje: "Closes today", fechaAmanha: "Closes tomorrow", hoje: "Today", amanha: "Tomorrow", horaPt: " (Portugal time)", fechaEm: (d) => `Closes in ${d} days`, abertoAte: "Open until ", verDatas: "See dates",
+      nadaBreve: "Nothing closes in the next 30 days. Have a look at the deadlines further down.", hojeAmanha: "Today", dias: (d) => d + " days", ate: "Until ",
       contagem: (n) => n === 1 ? "1 opportunity" : `${n} opportunities`,
       artigo: "Read my article on this topic ↗", avisoFonte: "Official European Commission notice ↗", paraQuem: "Who it is for", apoio: "What you get", duracao: "Duration", quando: "When", oficial: "Official page ↗",
       semRes: "There are no opportunities matching these filters.", verTodas: "See all opportunities",
@@ -102,6 +102,12 @@
   const fmtDia = (d) => fmt({ day: "numeric", month: "short", year: "numeric" }).format(d);
   const fmtDiaCurto = (d) => fmt({ day: "numeric", month: "short" }).format(d);
   const fmtMes = (d) => fmt({ month: "long", year: "numeric" }).format(d);
+  const TZ = "Europe/Lisbon";
+  const diaPt = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: TZ }).format(d);
+  const diasAte = (d) => Math.round((Date.parse(diaPt(d)) - Date.parse(diaPt(AGORA))) / DIA);
+  const temHora = (s) => s && s.length > 10 && !/T23:59/.test(s);
+  const fmtFim = (o, f) => fmtDia(f) + (temHora(o.fecha) ? ", " + new Intl.DateTimeFormat(t().locale, { timeZone: TZ, hour: "2-digit", minute: "2-digit" }).format(f) + t().horaPt : "");
+  const rotuloDias = (d) => d <= 0 ? t().hoje : d === 1 ? t().amanha : t().dias(d);
   const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
   /* Campo de uma oportunidade no idioma ativo (inglês com recurso ao português). */
@@ -128,7 +134,8 @@
     }
     if (fecha) {
       const dias = Math.ceil((fecha - AGORA) / DIA);
-      if (dias <= 14) return { cls: "breve", txt: dias <= 1 ? L.fechaHoje : L.fechaEm(dias), aberto: true };
+      const dc = diasAte(fecha);
+      if (dc <= 14) return { cls: "breve", txt: dc <= 0 ? L.fechaHoje : dc === 1 ? L.fechaAmanha : L.fechaEm(dc), aberto: true };
       return { cls: "aberto", txt: L.abertoAte + fmtDia(fecha), aberto: true };
     }
     return { cls: "futuro", txt: L.verDatas };
@@ -147,8 +154,7 @@
     const ul = document.getElementById("em-breve");
     if (!itens.length) { ul.innerHTML = `<li>${L.nadaBreve}</li>`; return; }
     ul.innerHTML = itens.map(({ o, f }) => {
-      const d = Math.ceil((f - AGORA) / DIA);
-      return `<li><span class="dias">${d <= 1 ? L.hojeAmanha : L.dias(d)}</span><span><a href="${esc(o.link)}" ${ext}>${esc(c(o, "titulo"))}</a><br><small>${L.ate}${fmtDia(f)}</small></span></li>`;
+      return `<li><span class="dias">${rotuloDias(diasAte(f))}</span><span><a href="${esc(o.link)}" ${ext}>${esc(c(o, "titulo"))}</a><br><small>${L.ate}${fmtFim(o, f)}</small></span></li>`;
     }).join("");
   }
 
