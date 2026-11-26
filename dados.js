@@ -102,6 +102,55 @@ const OPORTUNIDADES = [
     revisto: "2026-11-21"
   },
 
+  {
+    id: "tjue-redes",
+    titulo: "Criador/a de conteúdos para redes sociais no Tribunal de Justiça da UE",
+    entidade: "Tribunal de Justiça da UE (Luxemburgo)",
+    tipo: "emprego", nivel: ["licenciado", "mestrado"], destino: "ue",
+    paraQuem: "Nacionalidade da UE, pelo menos 3 anos de ensino superior com diploma, domínio de uma língua da UE e conhecimento satisfatório de outra, com inglês ou francês excelente e bom conhecimento da outra. Valoriza-se formação em comunicação e experiência audiovisual.",
+    apoio: "Contrato de agente contratual (grupo de funções IV)",
+    duracao: "Consulta o anúncio",
+    fecha: "2026-12-16T17:00+01:00",
+    link: "https://eu-careers.europa.eu/jobs/social-media-content-creator_en",
+    revisto: "2026-11-26"
+  },
+  {
+    id: "euaa-imprensa",
+    titulo: "Responsável de imprensa e comunicação na EUAA",
+    entidade: "Agência da UE para o Asilo (Valeta, Malta)",
+    tipo: "emprego", nivel: ["licenciado", "mestrado", "doutoramento"], destino: "ue",
+    paraQuem: "Vaga de agente temporário de grau AD 5. Consulta no anúncio os requisitos de formação e de experiência.",
+    apoio: "Contrato de agente temporário (AD 5)",
+    duracao: "Consulta o anúncio",
+    fecha: "2026-12-01T12:00+01:00",
+    link: "https://eu-careers.europa.eu/jobs/press-and-communications-officer_en",
+    revisto: "2026-11-26"
+  },
+  {
+    id: "rtd-comunicacao",
+    titulo: "Responsável de informação e comunicação na DG Investigação e Inovação",
+    entidade: "Comissão Europeia, DG RTD (Bruxelas)",
+    tipo: "emprego", nivel: ["licenciado", "mestrado", "doutoramento"], destino: "ue",
+    paraQuem: "Perfil com experiência comprovada na organização de grandes eventos e em publicações. Inglês fluente; o francês é uma vantagem. A candidatura é feita por email, com CV e formulário num único PDF.",
+    apoio: "Contrato de agente contratual (grupo de funções IV)",
+    duracao: "Consulta o anúncio",
+    fecha: "2026-11-30T12:00+01:00",
+    link: "https://eu-careers.europa.eu/jobs/information-and-communication-officer_en",
+    revisto: "2026-11-26"
+  },
+  {
+    id: "ela-comunicacao",
+    titulo: "Responsável sénior de comunicação na Autoridade Europeia do Trabalho",
+    entidade: "Autoridade Europeia do Trabalho (Bratislava)",
+    tipo: "emprego", nivel: ["licenciado", "mestrado", "doutoramento"], destino: "ue",
+    paraQuem: "Pelo menos 9 anos de experiência profissional depois do curso. É uma vaga para perfis seniores, não para quem está a começar.",
+    apoio: "Contrato de agente temporário (AD 8)",
+    duracao: "Consulta o anúncio",
+    fecha: "2026-11-27T12:00+01:00",
+    link: "https://www.ela.europa.eu/en/call-applications-senior-communications-officer",
+    revisto: "2026-11-26"
+  },
+
   /* ---------- ESTÁGIOS ---------- */
   {
     id: "tce-estagios",
@@ -499,6 +548,10 @@ const EN_DADOS = {
   "esa-relacoes-externas": { titulo: "Traineeship in the External Relations Department of the European Space Agency (ESA)", entidade: "ESA (Paris)", paraQuem: "Master's students, preferably in their final or penultimate year, enrolled for the whole traineeship. English or French. Open to nationals of Portugal and other ESA Member States.", apoio: "See the conditions on the ESA internships page.", duracao: "3 to 6 months, starting from February 2027" },
   "euaa-estagio": { titulo: "Traineeship at the EU Agency for Asylum (EUAA)", paraQuem: "First cycle of higher education completed, or at least three years of studies completed before the traineeship starts. Starts in March or April 2027.", apoio: "€1,500 a month", duracao: "Up to 6 months" },
   "conselho-estagios": { titulo: "Traineeships at the Council of the EU", entidade: "General Secretariat of the Council (Brussels)", paraQuem: "EU citizenship, a bachelor's degree, very good English or French and another EU language, and no previous work experience at another EU institution.", apoio: "Paid traineeship with allowances.", duracao: "5 months (September 2027 to January 2028)", quando: "Applications from 8 February 2027, in February and March" },
+  "tjue-redes": { titulo: "Social media content creator at the Court of Justice of the EU", entidade: "Court of Justice of the EU (Luxembourg)", paraQuem: "EU nationality, at least 3 years of higher education with a diploma, thorough knowledge of one EU language and satisfactory knowledge of another, with excellent English or French and good knowledge of the other. A communication degree and audiovisual experience are an advantage.", apoio: "Contract staff post (function group IV)", duracao: "See the vacancy notice" },
+  "euaa-imprensa": { titulo: "Press and communications officer at the EUAA", entidade: "EU Agency for Asylum (Valletta, Malta)", paraQuem: "Temporary staff post at grade AD 5. Check the education and experience requirements in the vacancy notice.", apoio: "Temporary staff contract (AD 5)", duracao: "See the vacancy notice" },
+  "rtd-comunicacao": { titulo: "Information and communication officer at DG Research and Innovation", entidade: "European Commission, DG RTD (Brussels)", paraQuem: "Proven experience organising large events and in publications. Fluent English; French is an advantage. Apply by email, with your CV and the application form in a single PDF.", apoio: "Contract staff post (function group IV)", duracao: "See the vacancy notice" },
+  "ela-comunicacao": { titulo: "Senior communications officer at the European Labour Authority", entidade: "European Labour Authority (Bratislava)", paraQuem: "At least 9 years of professional experience after your degree. This is a senior post, not an entry-level one.", apoio: "Temporary staff contract (AD 8)", duracao: "See the vacancy notice" },
   "tjue-estagios": { titulo: "Traineeships at the Court of Justice of the EU", entidade: "Court of Justice of the EU (Luxembourg)", paraQuem: "Nationality of an EU country and a university degree in any field (in the judges' chambers, law, political science, economics or a related field). Thorough knowledge of one official EU language, good knowledge of another and good French or English. No more than 6 weeks of previous experience in an EU institution.", apoio: "About €2,400 a month, plus €150 for travel", duracao: "3 to 5 months (sessions starting 1 March and 1 October)", quando: "Applications expected from February to April 2027, for the traineeship from October 2027 to February 2028", recorrente: "Two application rounds a year: February to April and July to September" },
   "bce-estagios": { titulo: "Traineeships at the European Central Bank (ECB)", entidade: "European Central Bank (Frankfurt)", paraQuem: "Students (including PhD students) or recent graduates with at least a bachelor's degree, EU nationality, fluent English and another EU language. No more than 12 months of professional experience.", apoio: "€1,170 a month, and the ECB pays for accommodation if you come from more than 50 km away", duracao: "3 to 6 months, extendable up to 12", quando: "Vacancies published throughout the year on the ECB careers portal" },
   "bei-estagios": { titulo: "Traineeships at the European Investment Bank (EIB)", entidade: "European Investment Bank (Luxembourg)", paraQuem: "Final-year students and recent graduates with less than one year of professional experience, EU nationality and English and/or French.", apoio: "€2,100 a month (adjusted outside Luxembourg), plus €500 for travel if you live more than 50 km away", duracao: "3 to 5 months", quando: "Two intakes a year, in March and April and in September and October; each is announced about 4 months in advance" },
