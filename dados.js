@@ -165,9 +165,84 @@ const OPORTUNIDADES = [
     revisto: "2026-11-22"
   },
   {
+    id: "tjue-estagios",
+    titulo: "Estágios no Tribunal de Justiça da UE",
+    entidade: "Tribunal de Justiça da UE (Luxemburgo)",
+    tipo: "estagio", nivel: ["licenciado", "mestrado"], destino: "ue",
+    paraQuem: "Nacionalidade de um país da UE e diploma universitário em qualquer área (nos gabinetes dos juízes, direito, ciência política, economia ou área próxima). Muito bom domínio de uma língua oficial da UE, bom de outra e bom francês ou inglês. Máximo de 6 semanas de experiência anterior numa instituição da UE.",
+    apoio: "Cerca de 2 400 € por mês, mais 150 € para a viagem",
+    duracao: "3 a 5 meses (sessões de 1 de março e 1 de outubro)",
+    abre: "2027-02-01", indicativo: true, quando: "Candidaturas previstas de fevereiro a abril de 2027, para o estágio de outubro de 2027 a fevereiro de 2028",
+    recorrente: "Duas candidaturas por ano: de fevereiro a abril e de julho a setembro",
+    link: "https://curia.europa.eu/site/jcms/d2_5152/en/",
+    revisto: "2026-11-26"
+  },
+  {
+    id: "bce-estagios",
+    titulo: "Estágios no Banco Central Europeu (BCE)",
+    entidade: "Banco Central Europeu (Frankfurt)",
+    tipo: "estagio", nivel: ["licenciado", "mestrado"], destino: "ue",
+    paraQuem: "Estudantes (incluindo de doutoramento) ou recém-diplomados com pelo menos licenciatura, nacionalidade da UE, inglês fluente e outra língua da UE. Máximo de 12 meses de experiência profissional.",
+    apoio: "1 170 € por mês, e o BCE paga o alojamento se vieres de mais de 50 km",
+    duracao: "3 a 6 meses, prolongável até 12",
+    quando: "Vagas publicadas ao longo do ano no portal de carreiras do BCE",
+    link: "https://www.ecb.europa.eu/careers/what-we-offer/traineeship/html/index.en.html",
+    revisto: "2026-11-26"
+  },
+  {
+    id: "bei-estagios",
+    titulo: "Estágios no Banco Europeu de Investimento (BEI)",
+    entidade: "Banco Europeu de Investimento (Luxemburgo)",
+    tipo: "estagio", nivel: ["finalista", "licenciado", "mestrado"], destino: "ue",
+    paraQuem: "Estudantes finalistas e recém-diplomados com menos de um ano de experiência profissional, nacionalidade da UE e inglês e/ou francês.",
+    apoio: "2 100 € por mês (ajustado fora do Luxemburgo), mais 500 € para a viagem se vives a mais de 50 km",
+    duracao: "3 a 5 meses",
+    quando: "Duas entradas por ano, em março e abril e em setembro e outubro; cada uma é anunciada cerca de 4 meses antes",
+    link: "https://www.eib.org/en/about/careers/categories/traineeships/index",
+    revisto: "2026-11-26"
+  },
+  {
+    id: "cese-estagios",
+    titulo: "Estágios no Comité Económico e Social Europeu (CESE)",
+    entidade: "CESE (Bruxelas)",
+    tipo: "estagio", nivel: ["finalista", "licenciado", "mestrado"], destino: "ue",
+    paraQuem: "Diplomados do ensino superior (ou com 3 anos de estudos superiores concluídos). Há também estágios curtos de 1 a 3 meses para estudantes.",
+    apoio: "1 538,88 € por mês no estágio longo (valor da primavera de 2026)",
+    duracao: "5 meses (início a 16 de fevereiro ou 16 de setembro)",
+    quando: "Duas sessões por ano: confirma as datas de candidatura no site do CESE",
+    link: "https://www.eesc.europa.eu/en/work-with-us/traineeships",
+    revisto: "2026-11-26"
+  },
+  {
+    id: "cdr-cicero",
+    titulo: "Estágios Cicero no Comité das Regiões Europeu",
+    entidade: "Comité das Regiões Europeu (Bruxelas)",
+    tipo: "estagio", nivel: ["licenciado", "mestrado"], destino: "ue",
+    paraQuem: "Licenciatura completa ou pelo menos 3 anos de ensino superior até ao fim do prazo, fluência numa língua da UE e inglês ou francês satisfatório. Máximo de 8 semanas de experiência anterior numa instituição da UE.",
+    apoio: "Cerca de 1 538 € por mês",
+    duracao: "5 meses (16 de setembro de 2027 a 15 de fevereiro de 2028)",
+    abre: "2027-01-06", fecha: "2027-03-31T12:00+02:00",
+    recorrente: "Duas candidaturas por ano: de 1 de julho a 1 de outubro (sessão da primavera) e de 6 de janeiro a 31 de março (sessão do outono)",
+    link: "https://cor.europa.eu/en/about/work-us/traineeships",
+    revisto: "2026-11-26"
+  },
+  {
+    id: "provedor-estagios",
+    titulo: "Estágios no Provedor de Justiça Europeu",
+    entidade: "Provedor de Justiça Europeu (Estrasburgo ou Bruxelas)",
+    tipo: "estagio", nivel: ["licenciado", "mestrado"], destino: "ue",
+    paraQuem: "Diplomados do ensino superior com interesse no projeto europeu e inglês muito bom. A candidatura é feita em inglês.",
+    apoio: "1 740 € por mês",
+    duracao: "12 meses, a partir de 1 de setembro",
+    abre: "2027-02-01", indicativo: true, quando: "Anúncios previstos para fevereiro de 2027; em 2026, os prazos terminaram em março",
+    recorrente: "Uma candidatura por ano, com anúncios normalmente em fevereiro",
+    link: "https://www.ombudsman.europa.eu/trainee",
+    revisto: "2026-11-26"
+  },
+  {
     id: "blue-book",
     titulo: "Estágio Blue Book (Comissão Europeia)",
-    entidade: "Comissão Europeia e outros organismos da UE",
+    entidade: "Comissão Europeia, SEAE, SEPD e outros organismos da UE",
     tipo: "estagio", nivel: ["licenciado", "mestrado"], destino: "ue",
     paraQuem: "Licenciatura de pelo menos 3 anos concluída, com diploma na candidatura. Inglês, francês ou alemão em C1 e outra língua da UE em B2. Máximo de 6 semanas de experiência anterior na UE.",
     apoio: "Cerca de 1 538 € por mês (valor de 2026)",
@@ -205,7 +280,7 @@ const OPORTUNIDADES = [
   },
   {
     id: "agencias-estagios", emPortugal: true,
-    titulo: "Estágios em agências e organismos da UE (EBA, ECDC, BCE e outros)",
+    titulo: "Estágios em agências e organismos da UE (EBA, ECDC, EMA e outros)",
     entidade: "Agências e organismos da UE",
     tipo: "estagio", nivel: ["finalista", "licenciado", "mestrado"], destino: "ue",
     paraQuem: "Varia por agência.",
@@ -424,10 +499,16 @@ const EN_DADOS = {
   "esa-relacoes-externas": { titulo: "Traineeship in the External Relations Department of the European Space Agency (ESA)", entidade: "ESA (Paris)", paraQuem: "Master's students, preferably in their final or penultimate year, enrolled for the whole traineeship. English or French. Open to nationals of Portugal and other ESA Member States.", apoio: "See the conditions on the ESA internships page.", duracao: "3 to 6 months, starting from February 2027" },
   "euaa-estagio": { titulo: "Traineeship at the EU Agency for Asylum (EUAA)", paraQuem: "First cycle of higher education completed, or at least three years of studies completed before the traineeship starts. Starts in March or April 2027.", apoio: "€1,500 a month", duracao: "Up to 6 months" },
   "conselho-estagios": { titulo: "Traineeships at the Council of the EU", entidade: "General Secretariat of the Council (Brussels)", paraQuem: "EU citizenship, a bachelor's degree, very good English or French and another EU language, and no previous work experience at another EU institution.", apoio: "Paid traineeship with allowances.", duracao: "5 months (September 2027 to January 2028)", quando: "Applications from 8 February 2027, in February and March" },
-  "blue-book": { titulo: "Blue Book traineeship (European Commission)", entidade: "European Commission and other EU bodies", paraQuem: "A completed bachelor's degree of at least 3 years, with the diploma in hand when you apply. English, French or German at C1 and another EU language at B2. No more than 6 weeks of previous experience at the EU institutions.", apoio: "Around €1,538 a month (2026 figure)", duracao: "5 months (1 October 2027 to 29 February 2028)", recorrente: "Two application rounds a year: February to March and July to September" },
+  "tjue-estagios": { titulo: "Traineeships at the Court of Justice of the EU", entidade: "Court of Justice of the EU (Luxembourg)", paraQuem: "Nationality of an EU country and a university degree in any field (in the judges' chambers, law, political science, economics or a related field). Thorough knowledge of one official EU language, good knowledge of another and good French or English. No more than 6 weeks of previous experience in an EU institution.", apoio: "About €2,400 a month, plus €150 for travel", duracao: "3 to 5 months (sessions starting 1 March and 1 October)", quando: "Applications expected from February to April 2027, for the traineeship from October 2027 to February 2028", recorrente: "Two application rounds a year: February to April and July to September" },
+  "bce-estagios": { titulo: "Traineeships at the European Central Bank (ECB)", entidade: "European Central Bank (Frankfurt)", paraQuem: "Students (including PhD students) or recent graduates with at least a bachelor's degree, EU nationality, fluent English and another EU language. No more than 12 months of professional experience.", apoio: "€1,170 a month, and the ECB pays for accommodation if you come from more than 50 km away", duracao: "3 to 6 months, extendable up to 12", quando: "Vacancies published throughout the year on the ECB careers portal" },
+  "bei-estagios": { titulo: "Traineeships at the European Investment Bank (EIB)", entidade: "European Investment Bank (Luxembourg)", paraQuem: "Final-year students and recent graduates with less than one year of professional experience, EU nationality and English and/or French.", apoio: "€2,100 a month (adjusted outside Luxembourg), plus €500 for travel if you live more than 50 km away", duracao: "3 to 5 months", quando: "Two intakes a year, in March and April and in September and October; each is announced about 4 months in advance" },
+  "cese-estagios": { titulo: "Traineeships at the European Economic and Social Committee (EESC)", entidade: "EESC (Brussels)", paraQuem: "Higher education graduates (or with 3 years of higher education completed). There are also short traineeships of 1 to 3 months for students.", apoio: "€1,538.88 a month for the long traineeship (spring 2026 rate)", duracao: "5 months (starting 16 February or 16 September)", quando: "Two sessions a year: check the application dates on the EESC website" },
+  "cdr-cicero": { titulo: "Cicero traineeships at the European Committee of the Regions", entidade: "European Committee of the Regions (Brussels)", paraQuem: "A full bachelor's degree or at least 3 years of higher education by the deadline, fluency in one EU language and satisfactory English or French. No more than 8 weeks of previous experience in an EU institution.", apoio: "About €1,538 a month", duracao: "5 months (16 September 2027 to 15 February 2028)", recorrente: "Two application rounds a year: 1 July to 1 October (spring session) and 6 January to 31 March (autumn session)" },
+  "provedor-estagios": { titulo: "Traineeships at the European Ombudsman", entidade: "European Ombudsman (Strasbourg or Brussels)", paraQuem: "Higher education graduates with an interest in the European project and very good English. Applications are made in English.", apoio: "€1,740 a month", duracao: "12 months, from 1 September", quando: "Notices expected in February 2027; in 2026, the deadlines were in March", recorrente: "One application round a year, with notices usually in February" },
+  "blue-book": { titulo: "Blue Book traineeship (European Commission)", entidade: "European Commission, EEAS, EDPS and other EU bodies", paraQuem: "A completed bachelor's degree of at least 3 years, with the diploma in hand when you apply. English, French or German at C1 and another EU language at B2. No more than 6 weeks of previous experience at the EU institutions.", apoio: "Around €1,538 a month (2026 figure)", duracao: "5 months (1 October 2027 to 29 February 2028)", recorrente: "Two application rounds a year: February to March and July to September" },
   "schuman": { titulo: "Schuman traineeships at the European Parliament", entidade: "European Parliament", paraQuem: "Aged 18 or over, nationality of an EU country, a full university degree and the language requirements. You must not have worked or done a traineeship for more than two months at an EU institution.", apoio: "Monthly allowance (varies with the place of assignment).", duracao: "5 months", recorrente: "Two application rounds a year: in May (traineeship from October to February) and in October (traineeship from March to July)" },
   "jpd": { entidade: "European External Action Service", paraQuem: "EU nationals with a master's degree and excellent English and/or French. Applications go through the national authority.", apoio: "€2,500 a month, plus €1,700 a month for accommodation and contributions towards travel and insurance", duracao: "12 months, renewable for another 12", quando: "A call every two years. The last one, for the 2026 to 2028 round, was open in April 2025." },
-  "agencias-estagios": { titulo: "Traineeships at EU agencies and bodies (EBA, ECDC, ECB and others)", entidade: "EU agencies and bodies", paraQuem: "Varies by agency.", apoio: "Usually paid.", duracao: "Varies: EMA 10 months, EUDA up to 11, EASA 12, Translation Centre 3 to 12 months" },
+  "agencias-estagios": { titulo: "Traineeships at EU agencies and bodies (EBA, ECDC, EMA and others)", entidade: "EU agencies and bodies", paraQuem: "Varies by agency.", apoio: "Usually paid.", duracao: "Varies: EMA 10 months, EUDA up to 11, EASA 12, Translation Centre 3 to 12 months" },
   "inov-contacto": { titulo: "INOV Contacto: paid international traineeships", paraQuem: "A completed bachelor's or integrated master's degree, legal residence in Portugal and aged up to 29. You can only take part once.", apoio: "Monthly grant (2.76 × IAS) during the phase in Portugal; travel, accommodation and insurance during the phase abroad.", duracao: "Varies by edition", quando: "Applications for the 29th edition opened in September 2026. The next edition is announced on the official website." },
   "onu-estagios": { titulo: "United Nations internships", entidade: "UN Secretariat and agencies", paraQuem: "Students or recent graduates. Vacancies are published throughout the year.", apoio: "Varies by agency.", duracao: "2 to 6 months" },
   "eiffel": { titulo: "France Excellence Eiffel scholarships", entidade: "French Ministry for Europe and Foreign Affairs · Campus France", paraQuem: "International students aged up to 29 (master's) or 35 (PhD). Only the French university can submit the application. Check the rules to see whether EU citizens are eligible.", apoio: "Monthly allowance and other costs (see the rules).", duracao: "12 to 24 months (master's)", quando: "The university sends the application to Campus France by 6 January 2027. Each university has an earlier internal deadline, so contact yours now." },
@@ -444,4 +525,4 @@ const EN_DADOS = {
   "epso-preparacao": { titulo: "Preparing for EPSO tests", paraQuem: "Anyone preparing for a competition or a contract staff selection.", apoio: "Sample tests, tutorial videos and the Epsy AI assistant, all free of charge.", duracao: "At your own pace" }
 };
 
-const ULTIMA_ATUALIZACAO = "2026-11-25";
+const ULTIMA_ATUALIZACAO = "2026-11-26";
